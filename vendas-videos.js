@@ -7,8 +7,8 @@ window.DOCFLOW_DEMOS = [
     title: "Cotas com poucos cliques",
     description: "Gere cotas de paredes, ambientes e famílias sem repetir tarefas.",
     videos: [
-      { id: "cotas-externas", title: "Cotas externas", shortTitle: "Cotas externas", icon: "media/tool-icons/icon-ParedesExternas.dark.png", src: "media/horizontal/cotas-externas.mp4?v=20260907", description: "Detecte o perímetro e crie as cadeias pelo lado externo." },
-      { id: "cotas-internas", title: "Cotas internas", shortTitle: "Cotas internas", icon: "media/tool-icons/icon-ParedesInternas.dark.png", src: "media/horizontal/cotas-internas.mp4?v=20260907", description: "Crie cadeias de cotas no interior do projeto." },
+      { id: "cotas-externas", title: "Cotas externas", shortTitle: "Cotas externas", icon: "media/tool-icons/icon-ParedesExternas.dark.png", src: "media/horizontal/cotas-externas.mp4?v=20260908", description: "Detecte o perímetro e crie as cadeias pelo lado externo." },
+      { id: "cotas-internas", title: "Cotas internas", shortTitle: "Cotas internas", icon: "media/tool-icons/icon-ParedesInternas.dark.png", src: "media/horizontal/cotas-internas.mp4?v=20260908", description: "Crie cadeias de cotas no interior do projeto." },
       { id: "cotas-ambientes", title: "Cotas de ambientes", shortTitle: "Por ambiente", icon: "media/tool-icons/icon-CotaAmbientes.dark.png", src: "media/horizontal/cotas-ambientes.mp4?v=20260907", description: "Gere cadeias horizontais e verticais por ambiente." },
       { id: "cotas-familias", title: "Cotas de famílias", shortTitle: "Cotar famílias", icon: "media/tool-icons/icon-FamiliasAmbiente.dark.png", src: "media/horizontal/cotas-familias.mp4?v=20260907", description: "Cote automaticamente as famílias contidas no projeto." }
     ]
