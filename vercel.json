@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://docflow-arq.vercel.app",
+      "permanent": false
+    }
+  ]
+}
