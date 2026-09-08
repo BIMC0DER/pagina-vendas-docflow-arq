@@ -4,7 +4,6 @@ const STUDENT_VALIDATION = {
 };
 
 const CHECKOUTS = {
-  mensal: "",
   anual: "https://pay.hotmart.com/H107343223J?off=j0potk7j",
   aluno: "https://pay.hotmart.com/H107343223J?off=n8h1l3g4"
 };
@@ -292,7 +291,6 @@ function initStudentPricing() {
   const cash = card?.querySelector("[data-cash-price]");
   const condition = card?.querySelector("[data-price-condition]");
   const badge = card?.querySelector("[data-price-badge]");
-  const badgeNote = card?.querySelector("[data-price-badge-note]");
   const checkout = card?.querySelector("[data-price-cta]");
   const dialog = document.getElementById("studentValidationDialog");
   const form = document.getElementById("studentValidationForm");
@@ -313,7 +311,6 @@ function initStudentPricing() {
     cash.textContent = "ou R$ 497 à vista por ano";
     condition.innerHTML = isStudent ? "<strong>Condição anual exclusiva para aluno BIM Coder.</strong><span>Oferta válida após a confirmação do e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 497/ano enquanto sua assinatura permanecer ativa.</span>";
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
-    if (badgeNote) badgeNote.textContent = isStudent ? "CONDIÇÃO EXCLUSIVA BIM CODER" : "50% DE DESCONTO";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
     checkout.textContent = isStudent ? "Quero o plano de aluno — R$ 39,90/mês" : "Quero o plano anual — R$ 49,90/mês";
     card.classList.toggle("is-student", isStudent);

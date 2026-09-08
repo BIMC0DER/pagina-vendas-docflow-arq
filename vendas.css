@@ -128,7 +128,7 @@ dialog{width:min(500px,calc(100% - 34px));padding:34px;border:1px solid var(--li
 
 /* Sequência completa: pausa, pergunta, calculadora e fechamento no mesmo palco. */
 .roi-section{padding-block:0}
-.time-story.story-enhanced{height:440vh;height:440svh}
+.time-story.story-enhanced{height:510vh;height:510svh}
 .story-enhanced .time-stage{isolation:isolate}
 .story-enhanced .time-pause,
 .story-enhanced .time-question,
@@ -143,7 +143,7 @@ dialog{width:min(500px,calc(100% - 34px));padding:34px;border:1px solid var(--li
 .story-enhanced .time-question .scroll-invitation{opacity:var(--question-invitation-opacity,0)}
 .story-enhanced .time-next .scroll-invitation{opacity:var(--closing-opacity,0);transform:translateY(calc(12px * (1 - var(--closing-opacity,0))))}
 @media(max-width:920px){.story-enhanced .time-calculator{max-width:680px;gap:24px}.story-enhanced .calculator{padding:24px}.story-enhanced .calc-result{padding-top:20px}.story-enhanced .calc-result strong{font-size:clamp(34px,8vw,46px)}}
-@media(max-width:680px){.time-story.story-enhanced{height:420svh}.story-enhanced .time-stage{padding-block:16px}.story-enhanced .time-calculator{gap:18px}.story-enhanced .time-calculator .roi-copy p{display:none}.story-enhanced .time-calculator h3{font-size:30px;margin:8px 0 0}.story-enhanced .calculator{padding:20px}.story-enhanced .calculator input[type=range]{margin-bottom:18px}.story-enhanced .calc-result{padding-top:16px}.story-enhanced .calc-result small{font-size:10px}.story-enhanced .time-next{padding-inline:10px}}
+@media(max-width:680px){.time-story.story-enhanced{height:490svh}.story-enhanced .time-stage{padding-block:16px}.story-enhanced .time-calculator{gap:18px}.story-enhanced .time-calculator .roi-copy p{display:none}.story-enhanced .time-calculator h3{font-size:30px;margin:8px 0 0}.story-enhanced .calculator{padding:20px}.story-enhanced .calculator input[type=range]{margin-bottom:18px}.story-enhanced .calc-result{padding-top:16px}.story-enhanced .calc-result small{font-size:10px}.story-enhanced .time-next{padding-inline:10px}}
 @media(prefers-reduced-motion:reduce){.time-story.story-enhanced{height:auto}.story-enhanced .time-stage{display:flex}.story-enhanced .time-calculator,.story-enhanced .time-next{opacity:1;transform:none;pointer-events:auto}.story-enhanced .time-question .scroll-invitation,.story-enhanced .time-next .scroll-invitation{opacity:1;transform:none}}
 
 /* Movimento editorial: cascata de ferramentas e comparação progressiva. */
@@ -692,7 +692,9 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 @media(max-width:680px){
   #ferramentas{padding-block:54px}
   #ferramentas .tools-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-  #ferramentas .tools-mosaic .tool-tile{grid-column:span 1;min-height:64px;padding:9px}
+  #ferramentas .tools-mosaic .tool-tile{grid-column:span 1;min-height:64px;padding:10px 11px}
+  #ferramentas .tools-mosaic .tool-tile:last-child:nth-child(odd){grid-column:1/-1}
+  #ferramentas .tool-tile h3{overflow-wrap:normal;word-break:normal}
   #ferramentas .tool-tile h3{font-size:11px}
 }
 
@@ -840,7 +842,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 /* Cena de lançamento: preparação, ignição e saída de órbita. */
 .launch-story{position:relative;background:#080e1d;color:#f3f8ff}
 .launch-stage{position:relative;min-height:760px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 70% 95%,#172e52 0%,#0c1529 38%,#080d1b 75%)}
-.launch-enhanced{height:260svh}
+.launch-enhanced{height:310svh}
 .launch-enhanced .launch-stage{position:sticky;top:69px;height:calc(100svh - 69px);min-height:0}
 .launch-copy{position:absolute;z-index:3;top:22%;left:max(6vw,calc((100vw - 1160px)/2));width:57%;max-width:760px;opacity:var(--copy-alpha,1);transform:translateY(var(--copy-y,0px))}
 .launch-copy .eyebrow,.launch-arrival .eyebrow{color:#64ddea;font-size:11px;letter-spacing:.18em}
@@ -861,7 +863,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .launch-timeline{position:absolute;bottom:0;left:0;width:100%;height:2px;background:#ffffff0c}
 .launch-timeline span{display:block;width:100%;height:100%;background:linear-gradient(90deg,#21c9da,#8860ee);transform:scaleX(var(--launch-p,0));transform-origin:left}
 @media(max-width:680px){
- .launch-enhanced{height:230svh}
+ .launch-enhanced{height:285svh}
  .launch-copy{top:9%;left:7%;width:86%;text-align:center;max-width:none}
  .launch-copy h2{font-size:clamp(29px,7.8vw,43px);margin-top:15px}
  .launch-copy .eyebrow{font-size:9px;letter-spacing:.1em}
@@ -973,7 +975,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .pricing-heading h2{font-size:clamp(40px,4.7vw,62px)}
 .student-price-row{display:flex;justify-content:center;align-items:center;gap:15px;margin:0 auto 20px;color:#68768a;font-size:12px;font-weight:700}
 .student-price-row .student-switch{width:min(100%,470px);margin:0}
-.pricing-options{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:18px;align-items:stretch}
+.pricing-options{display:grid;grid-template-columns:minmax(0,580px);justify-content:center;gap:18px;align-items:stretch}
 .pricing-options .price-card{display:flex;flex-direction:column;width:auto;margin:0;padding:30px;border-radius:22px}
 .price-monthly{border-color:rgba(13,17,23,.12);box-shadow:0 18px 45px rgba(32,48,74,.08)}
 .price-annual{overflow:visible;border-color:#0b93a8;box-shadow:0 28px 70px rgba(11,147,168,.14)}
@@ -1103,10 +1105,8 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
   top:-35px;
   right:22px;
   min-width:258px;
-  min-height:70px;
-  padding:10px 22px 11px;
-  flex-direction:column;
-  gap:3px;
+  min-height:56px;
+  padding:10px 22px;
   border-width:3px;
   border-radius:18px;
   background:linear-gradient(115deg,#bc001d 0%,#f01835 52%,#c50024 100%);
@@ -1132,7 +1132,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .price-annual.is-student .price-condition{border-left-color:#6541d2;background:linear-gradient(90deg,rgba(101,65,210,.1),rgba(101,65,210,.025))}
 .price-annual.is-student .price-condition strong{color:#5131b8}
 @media(max-width:760px){
-  .price-annual .best-badge{top:-33px;right:50%;width:min(290px,calc(100% - 34px));min-width:0;min-height:66px;padding:9px 14px 10px;border-radius:17px}
+  .price-annual .best-badge{top:-27px;right:50%;width:min(250px,calc(100% - 34px));min-width:0;min-height:54px;padding:9px 14px;border-radius:17px}
   .price-annual .best-badge strong{font-size:17px}
   .price-annual .best-badge small{font-size:7.5px;letter-spacing:.095em}
   .price-annual .plan-card-head{padding-top:18px}

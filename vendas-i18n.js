@@ -135,7 +135,7 @@
     "Escolha um menu para explorar as configurações.": "Elija un menú para explorar las configuraciones."
   });  Object.assign(copy.en, {
     "Escolha seu plano": "Choose your plan", "Documente mais. Pague do seu jeito.": "Document more. Pay your way.",
-    "Todos os planos incluem as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "Every plan includes DocFlow ARQ tools and updates throughout the subscription.",
+    "O plano anual inclui todas as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "The annual plan includes all DocFlow ARQ tools and updates throughout the subscription.",
     "Condição do plano anual:": "Annual plan eligibility:", "Plano mensal": "Monthly plan", "Mais flexibilidade": "More flexibility", "/ mês": "/ month",
     "Acesso completo com cobrança mensal.": "Full access with monthly billing.", "Todos os comandos do DocFlow ARQ": "All DocFlow ARQ commands", "Atualizações e atendimento": "Updates and support",
     "Quero o plano mensal — R$ 97/mês": "I want the monthly plan — R$ 97/month", "Plano anual": "Annual plan", "Melhor custo-benefício": "Best value", "De": "From", "por": "now",
@@ -150,7 +150,7 @@
   });
   Object.assign(copy.es, {
     "Escolha seu plano": "Elija su plan", "Documente mais. Pague do seu jeito.": "Documente más. Pague a su manera.",
-    "Todos os planos incluem as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "Todos los planes incluyen las herramientas de DocFlow ARQ y las actualizaciones durante la suscripción.",
+    "O plano anual inclui todas as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "El plan anual incluye todas las herramientas de DocFlow ARQ y las actualizaciones durante la suscripción.",
     "Condição do plano anual:": "Condición del plan anual:", "Plano mensal": "Plan mensual", "Mais flexibilidade": "Más flexibilidad", "/ mês": "/ mes",
     "Acesso completo com cobrança mensal.": "Acceso completo con cobro mensual.", "Todos os comandos do DocFlow ARQ": "Todos los comandos de DocFlow ARQ", "Atualizações e atendimento": "Actualizaciones y soporte",
     "Quero o plano mensal — R$ 97/mês": "Quiero el plan mensual — R$ 97/mes", "Plano anual": "Plan anual", "Melhor custo-benefício": "Mejor relación costo-beneficio", "De": "De", "por": "por",
@@ -211,7 +211,6 @@
   Object.assign(copy.en, {
     "OFERTA ÚNICA DE FUNDADOR": "EXCLUSIVE FOUNDER OFFER",
     "OFERTA ÚNICA": "EXCLUSIVE OFFER",
-    "50% DE DESCONTO": "50% OFF",
     "ou R$ 497 à vista por ano": "or R$ 497 upfront per year",
     "Condição exclusiva para quem entrar durante o lançamento.": "Exclusive pricing for customers who join during the launch.",
     "Preço de fundador garantido.": "Founder price guaranteed.",
@@ -222,7 +221,6 @@
   Object.assign(copy.es, {
     "OFERTA ÚNICA DE FUNDADOR": "OFERTA ÚNICA DE FUNDADOR",
     "OFERTA ÚNICA": "OFERTA ÚNICA",
-    "50% DE DESCONTO": "50% DE DESCUENTO",
     "ou R$ 497 à vista por ano": "o R$ 497 al contado por año",
     "Condição exclusiva para quem entrar durante o lançamento.": "Condición exclusiva para quienes se suscriban durante el lanzamiento.",
     "Preço de fundador garantido.": "Precio de fundador garantizado.",
