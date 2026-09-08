@@ -211,7 +211,7 @@
   Object.assign(copy.en, {
     "OFERTA ÚNICA DE FUNDADOR": "EXCLUSIVE FOUNDER OFFER",
     "OFERTA ÚNICA": "EXCLUSIVE OFFER",
-    "DE FUNDADOR": "FOR FOUNDERS",
+    "50% DE DESCONTO": "50% OFF",
     "ou R$ 497 à vista por ano": "or R$ 497 upfront per year",
     "Condição exclusiva para quem entrar durante o lançamento.": "Exclusive pricing for customers who join during the launch.",
     "Preço de fundador garantido.": "Founder price guaranteed.",
@@ -222,7 +222,7 @@
   Object.assign(copy.es, {
     "OFERTA ÚNICA DE FUNDADOR": "OFERTA ÚNICA DE FUNDADOR",
     "OFERTA ÚNICA": "OFERTA ÚNICA",
-    "DE FUNDADOR": "DE FUNDADOR",
+    "50% DE DESCONTO": "50% DE DESCUENTO",
     "ou R$ 497 à vista por ano": "o R$ 497 al contado por año",
     "Condição exclusiva para quem entrar durante o lançamento.": "Condición exclusiva para quienes se suscriban durante el lanzamiento.",
     "Preço de fundador garantido.": "Precio de fundador garantizado.",

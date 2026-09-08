@@ -313,7 +313,7 @@ function initStudentPricing() {
     cash.textContent = "ou R$ 497 à vista por ano";
     condition.innerHTML = isStudent ? "<strong>Condição anual exclusiva para aluno BIM Coder.</strong><span>Oferta válida após a confirmação do e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 497/ano enquanto sua assinatura permanecer ativa.</span>";
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
-    if (badgeNote) badgeNote.textContent = isStudent ? "CONDIÇÃO EXCLUSIVA BIM CODER" : "DE FUNDADOR";
+    if (badgeNote) badgeNote.textContent = isStudent ? "CONDIÇÃO EXCLUSIVA BIM CODER" : "50% DE DESCONTO";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
     checkout.textContent = isStudent ? "Quero o plano de aluno — R$ 39,90/mês" : "Quero o plano anual — R$ 49,90/mês";
     card.classList.toggle("is-student", isStudent);
