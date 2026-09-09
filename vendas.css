@@ -975,7 +975,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .pricing-heading h2{font-size:clamp(40px,4.7vw,62px)}
 .student-price-row{display:flex;justify-content:center;align-items:center;gap:15px;margin:0 auto 20px;color:#68768a;font-size:12px;font-weight:700}
 .student-price-row .student-switch{width:min(100%,470px);margin:0}
-.pricing-options{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);justify-content:center;gap:18px;align-items:stretch;margin-top:40px}
+.pricing-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));justify-content:center;gap:18px;align-items:stretch;margin-top:40px}
 .pricing-options .price-card{display:flex;flex-direction:column;width:auto;margin:0;padding:30px;border-radius:22px}
 .price-monthly{border-color:rgba(13,17,23,.12);box-shadow:0 18px 45px rgba(32,48,74,.08)}
 .price-annual{overflow:visible;border-color:#0b93a8;box-shadow:0 28px 70px rgba(11,147,168,.14)}
@@ -1003,15 +1003,12 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .price-annual.is-price-revealed .annual-price-before>strong::after{animation:normal-price-strike .48s .72s cubic-bezier(.2,.8,.2,1) forwards}
 .price-annual.is-price-revealed .annual-price-offer{animation:discount-price-reveal .64s 1.22s cubic-bezier(.17,.84,.28,1.18) forwards}
 .cash-price{min-height:0!important;margin:7px 0 3px!important;color:#68768a!important;font-size:11px!important}
-.price-annual .price-condition{min-height:38px;margin:0 0 16px;color:#68768a;font-size:11px;line-height:1.45}
+.price-annual .price-condition{min-height:0;margin:0 0 14px!important;padding:15px 16px 14px 17px;border:1px solid rgba(228,38,63,.2);border-left:5px solid #e4263f;border-radius:12px;background:linear-gradient(100deg,rgba(228,38,63,.1),rgba(228,38,63,.035));box-shadow:0 10px 26px rgba(228,38,63,.09);color:#68768a!important;font-size:11px;line-height:1.45}.price-annual .price-condition strong{display:block;margin-bottom:3px;color:#c90828;font-size:14px;letter-spacing:-.01em}.price-annual .price-condition span{display:block}
 .compact-plan-features{display:grid!important;gap:8px!important;margin:0 0 24px!important;padding:17px 0 0!important;border-top:1px solid rgba(13,17,23,.1)!important}
 .compact-plan-features li{font-size:12px!important;line-height:1.35!important}
 .pricing-options .checkout-link{width:100%;min-height:50px;margin-top:auto;padding-inline:15px;font-size:12px}
 .price-monthly .button-outline{border-color:rgba(13,17,23,.16);background:#fff;color:#17202c}
 .price-monthly .button-outline:hover{border-color:#0b93a8;background:#f5fbfc}
-.monthly-total{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:#f2f5f8;color:#59677a;font-size:12px;line-height:1.4}
-.monthly-total strong{display:block;margin-top:2px;color:#17202c;font-size:18px}
-.annual-total{min-height:0!important;margin:1px 0 7px!important;color:#59677a!important;font-size:11px!important;font-weight:750}
 .annual-comparison{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:0!important;margin:0 0 10px!important;padding:12px 14px;border-radius:12px;background:#f5f7fa;color:#68768a!important;font-size:11px!important;line-height:1.4}
 .annual-comparison span{display:block}.annual-comparison s{color:#8a95a4}.annual-comparison strong{flex:none;color:#e4263f;font-size:13px}
 .savings-pill{min-height:0!important;margin:0 0 18px!important;padding:10px 14px;border:1px solid rgba(11,147,168,.28);border-radius:999px;background:linear-gradient(90deg,rgba(11,147,168,.08),rgba(109,69,217,.08));color:#087f98!important;font-size:11px!important;font-weight:850;text-align:center}
