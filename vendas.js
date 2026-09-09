@@ -314,7 +314,7 @@ function initStudentPricing() {
     condition.classList.toggle("is-student", isStudent);
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
-    checkout.textContent = isStudent ? "Quero a oferta de aluno — 12x de R$ 49,90" : "Quero a oferta anual — 12x de R$ 59,90";
+    checkout.textContent = isStudent ? "Quero a oferta de aluno — 12x de R$ 49,90" : "Quero garantir o desconto de fundador";
     card.classList.toggle("is-student", isStudent);
     card.classList.remove("is-price-changing");
     window.requestAnimationFrame(() => card.classList.add("is-price-changing"));
