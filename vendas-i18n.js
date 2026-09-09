@@ -211,22 +211,36 @@
   Object.assign(copy.en, {
     "OFERTA ÚNICA DE FUNDADOR": "EXCLUSIVE FOUNDER OFFER",
     "OFERTA ÚNICA": "EXCLUSIVE OFFER",
-    "ou R$ 497 à vista por ano": "or R$ 497 upfront per year",
+    "De 12x de": "From 12 installments of",
+    "por 12x de": "now 12 installments of",
+    "ou R$ 797 à vista": "or R$ 797 upfront",
+    "Preço especial para aluno BIM Coder.": "Special price for BIM Coder students.",
+    "R$ 497 à vista ou 12x de R$ 49,90 após confirmar seu e-mail.": "R$ 497 upfront or 12 installments of R$ 49.90 after confirming your email.",
+    "Quero a oferta anual — 12x de R$ 59,90": "I want the annual offer — 12 installments of R$ 59.90",
+    "Quero a oferta de aluno — 12x de R$ 49,90": "I want the student offer — 12 installments of R$ 49.90",
+    "ou R$ 597 à vista": "or R$ 597 upfront", "ou R$ 497 à vista": "or R$ 497 upfront",
     "Condição exclusiva para quem entrar durante o lançamento.": "Exclusive pricing for customers who join during the launch.",
     "Preço de fundador garantido.": "Founder price guaranteed.",
-    "Renove por R$ 497/ano enquanto sua assinatura permanecer ativa.": "Renew for R$ 497/year while your subscription remains active.",
+    "Renove por R$ 597/ano enquanto sua assinatura permanecer ativa.": "Renew for R$ 597/year while your subscription remains active.",
     "Como funciona a oferta de fundador?": "How does the founder offer work?",
-    "A oferta de fundador garante o plano anual por R$ 49,90/mês ou R$ 497 à vista. Você mantém a renovação por R$ 497/ano enquanto a assinatura permanecer ativa. Se cancelar e voltar depois, será aplicado o preço vigente.": "The founder offer secures the annual plan for R$ 49.90/month or R$ 497 upfront. You keep renewing for R$ 497/year while your subscription remains active. If you cancel and return later, the current price will apply."
+    "A oferta de fundador garante o plano anual por R$ 597 à vista ou em 12x de R$ 59,90. Você mantém a renovação por R$ 597/ano enquanto a assinatura permanecer ativa. Alunos BIM Coder elegíveis pagam R$ 497 à vista ou 12x de R$ 49,90. Se cancelar e voltar depois, será aplicado o preço vigente.": "The founder offer secures the annual plan for R$ 597 upfront or 12 installments of R$ 59.90. You keep renewing for R$ 597/year while your subscription remains active. Eligible BIM Coder students pay R$ 497 upfront or 12 installments of R$ 49.90. If you cancel and return later, the current price will apply."
   });
   Object.assign(copy.es, {
     "OFERTA ÚNICA DE FUNDADOR": "OFERTA ÚNICA DE FUNDADOR",
     "OFERTA ÚNICA": "OFERTA ÚNICA",
-    "ou R$ 497 à vista por ano": "o R$ 497 al contado por año",
+    "De 12x de": "De 12 cuotas de",
+    "por 12x de": "por 12 cuotas de",
+    "ou R$ 797 à vista": "o R$ 797 al contado",
+    "Preço especial para aluno BIM Coder.": "Precio especial para alumnos BIM Coder.",
+    "R$ 497 à vista ou 12x de R$ 49,90 após confirmar seu e-mail.": "R$ 497 al contado o 12 cuotas de R$ 49,90 después de confirmar su correo.",
+    "Quero a oferta anual — 12x de R$ 59,90": "Quiero la oferta anual — 12 cuotas de R$ 59,90",
+    "Quero a oferta de aluno — 12x de R$ 49,90": "Quiero la oferta para alumnos — 12 cuotas de R$ 49,90",
+    "ou R$ 597 à vista": "o R$ 597 al contado", "ou R$ 497 à vista": "o R$ 497 al contado",
     "Condição exclusiva para quem entrar durante o lançamento.": "Condición exclusiva para quienes se suscriban durante el lanzamiento.",
     "Preço de fundador garantido.": "Precio de fundador garantizado.",
-    "Renove por R$ 497/ano enquanto sua assinatura permanecer ativa.": "Renueve por R$ 497/año mientras su suscripción permanezca activa.",
+    "Renove por R$ 597/ano enquanto sua assinatura permanecer ativa.": "Renueve por R$ 597/año mientras su suscripción permanezca activa.",
     "Como funciona a oferta de fundador?": "¿Cómo funciona la oferta de fundador?",
-    "A oferta de fundador garante o plano anual por R$ 49,90/mês ou R$ 497 à vista. Você mantém a renovação por R$ 497/ano enquanto a assinatura permanecer ativa. Se cancelar e voltar depois, será aplicado o preço vigente.": "La oferta de fundador garantiza el plan anual por R$ 49,90/mes o R$ 497 al contado. Mantiene la renovación por R$ 497/año mientras su suscripción permanezca activa. Si cancela y vuelve después, se aplicará el precio vigente."
+    "A oferta de fundador garante o plano anual por R$ 597 à vista ou em 12x de R$ 59,90. Você mantém a renovação por R$ 597/ano enquanto a assinatura permanecer ativa. Alunos BIM Coder elegíveis pagam R$ 497 à vista ou 12x de R$ 49,90. Se cancelar e voltar depois, será aplicado o preço vigente.": "La oferta de fundador garantiza el plan anual por R$ 597 al contado o en 12 cuotas de R$ 59,90. Mantiene la renovación por R$ 597/año mientras su suscripción permanezca activa. Los alumnos BIM Coder elegibles pagan R$ 497 al contado o 12 cuotas de R$ 49,90. Si cancela y vuelve después, se aplicará el precio vigente."
   });  const labels = { pt: { code: "BR", name: "PT" }, en: {
 "Ver ferramentas": "See tools", code: "EN", name: "EN" }, es: {
 "Ver ferramentas": "Ver herramientas", code: "ES", name: "ES" } };

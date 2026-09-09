@@ -307,12 +307,12 @@ function initStudentPricing() {
   const setStudent = (isStudent) => {
     switcher.dataset.student = isStudent ? "yes" : "no";
     options.forEach(option => option.setAttribute("aria-pressed", String((option.dataset.studentOption === "yes") === isStudent)));
-    value.textContent = isStudent ? "39,90" : "49,90";
-    cash.textContent = "ou R$ 497 à vista por ano";
-    condition.innerHTML = isStudent ? "<strong>Condição anual exclusiva para aluno BIM Coder.</strong><span>Oferta válida após a confirmação do e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 497/ano enquanto sua assinatura permanecer ativa.</span>";
+    value.textContent = isStudent ? "49,90" : "59,90";
+    cash.textContent = isStudent ? "ou R$ 497 à vista" : "ou R$ 597 à vista";
+    condition.innerHTML = isStudent ? "<strong>Preço especial para aluno BIM Coder.</strong><span>R$ 497 à vista ou 12x de R$ 49,90 após confirmar seu e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 597/ano enquanto sua assinatura permanecer ativa.</span>";
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
-    checkout.textContent = isStudent ? "Quero o plano de aluno — R$ 39,90/mês" : "Quero o plano anual — R$ 49,90/mês";
+    checkout.textContent = isStudent ? "Quero a oferta de aluno — 12x de R$ 49,90" : "Quero a oferta anual — 12x de R$ 59,90";
     card.classList.toggle("is-student", isStudent);
     card.classList.remove("is-price-changing");
     window.requestAnimationFrame(() => card.classList.add("is-price-changing"));
