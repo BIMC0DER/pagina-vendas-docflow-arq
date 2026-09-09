@@ -975,7 +975,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .pricing-heading h2{font-size:clamp(40px,4.7vw,62px)}
 .student-price-row{display:flex;justify-content:center;align-items:center;gap:15px;margin:0 auto 20px;color:#68768a;font-size:12px;font-weight:700}
 .student-price-row .student-switch{width:min(100%,470px);margin:0}
-.pricing-options{display:grid;grid-template-columns:minmax(0,580px);justify-content:center;gap:18px;align-items:stretch;margin-top:40px}
+.pricing-options{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);justify-content:center;gap:18px;align-items:stretch;margin-top:40px}
 .pricing-options .price-card{display:flex;flex-direction:column;width:auto;margin:0;padding:30px;border-radius:22px}
 .price-monthly{border-color:rgba(13,17,23,.12);box-shadow:0 18px 45px rgba(32,48,74,.08)}
 .price-annual{overflow:visible;border-color:#0b93a8;box-shadow:0 28px 70px rgba(11,147,168,.14)}
@@ -1009,12 +1009,19 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .pricing-options .checkout-link{width:100%;min-height:50px;margin-top:auto;padding-inline:15px;font-size:12px}
 .price-monthly .button-outline{border-color:rgba(13,17,23,.16);background:#fff;color:#17202c}
 .price-monthly .button-outline:hover{border-color:#0b93a8;background:#f5fbfc}
+.monthly-total{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:#f2f5f8;color:#59677a;font-size:12px;line-height:1.4}
+.monthly-total strong{display:block;margin-top:2px;color:#17202c;font-size:18px}
+.annual-total{min-height:0!important;margin:1px 0 7px!important;color:#59677a!important;font-size:11px!important;font-weight:750}
+.annual-comparison{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:0!important;margin:0 0 10px!important;padding:12px 14px;border-radius:12px;background:#f5f7fa;color:#68768a!important;font-size:11px!important;line-height:1.4}
+.annual-comparison span{display:block}.annual-comparison s{color:#8a95a4}.annual-comparison strong{flex:none;color:#e4263f;font-size:13px}
+.savings-pill{min-height:0!important;margin:0 0 18px!important;padding:10px 14px;border:1px solid rgba(11,147,168,.28);border-radius:999px;background:linear-gradient(90deg,rgba(11,147,168,.08),rgba(109,69,217,.08));color:#087f98!important;font-size:11px!important;font-weight:850;text-align:center}
+.price-annual.is-student .savings-pill{border-color:rgba(109,69,217,.28);color:#5736bd!important}
 .price-annual.is-student{border-color:#6d45d9;box-shadow:0 28px 70px rgba(109,69,217,.13)}
 .price-annual.is-price-changing [data-price-value]{display:inline-block;animation:price-pop .35s ease}
 @keyframes normal-price-strike{to{transform:rotate(-5deg) scaleX(1)}}
 @keyframes normal-price-dim{to{opacity:.48;transform:translateY(-3px)}}
 @keyframes discount-price-reveal{0%{opacity:0;transform:translateY(13px) scale(.96)}70%{opacity:1;transform:translateY(-2px) scale(1.025)}100%{opacity:1;transform:none}}
-@media(max-width:760px){.pricing-section{padding-block:64px}.pricing-container{width:min(100% - 28px,1080px)}.student-price-row{display:grid;gap:8px}.student-price-row>span{text-align:center}.pricing-options{grid-template-columns:1fr}.pricing-options .price-card{padding:26px}.price-monthly{order:2}.price-annual{order:1}.annual-price-offer strong,.monthly-price>strong{font-size:62px}.annual-price-before>strong{font-size:37px}.plan-card-head{align-items:flex-start}.plan-card-head>small{text-align:right}}
+@media(max-width:760px){.pricing-section{padding-block:64px}.annual-comparison{align-items:flex-start;flex-direction:column;gap:4px}.annual-comparison strong{font-size:14px}.pricing-container{width:min(100% - 28px,1080px)}.student-price-row{display:grid;gap:8px}.student-price-row>span{text-align:center}.pricing-options{grid-template-columns:1fr}.pricing-options .price-card{padding:26px}.price-monthly{order:2}.price-annual{order:1}.annual-price-offer strong,.monthly-price>strong{font-size:62px}.annual-price-before>strong{font-size:37px}.plan-card-head{align-items:flex-start}.plan-card-head>small{text-align:right}}
 @media(max-width:390px){.annual-price-offer strong,.monthly-price>strong{font-size:55px}.annual-price-offer small,.monthly-price>small{font-size:13px}.annual-price-offer sup{font-size:16px}.student-switch button{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.annual-price-before{opacity:.48;transform:translateY(-3px)}.annual-price-before>strong::after{transform:rotate(-5deg) scaleX(1)}.annual-price-offer{opacity:1;transform:none}}
 /* Risco editorial que reforça “O fim” na promessa principal. */

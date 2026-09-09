@@ -4,6 +4,7 @@ const STUDENT_VALIDATION = {
 };
 
 const CHECKOUTS = {
+  mensal: "",
   anual: "https://pay.hotmart.com/H107343223J?off=j0potk7j",
   aluno: "https://pay.hotmart.com/H107343223J?off=n8h1l3g4"
 };
@@ -290,6 +291,9 @@ function initStudentPricing() {
   const value = card?.querySelector("[data-price-value]");
   const cash = card?.querySelector("[data-cash-price]");
   const condition = card?.querySelector("[data-price-condition]");
+  const annualTotal = card?.querySelector("[data-annual-total]");
+  const comparison = card?.querySelector("[data-annual-comparison]");
+  const savings = card?.querySelector("[data-annual-savings]");
   const badge = card?.querySelector("[data-price-badge]");
   const checkout = card?.querySelector("[data-price-cta]");
   const dialog = document.getElementById("studentValidationDialog");
@@ -298,7 +302,7 @@ function initStudentPricing() {
   const submit = dialog?.querySelector("[data-student-submit]");
   const status = dialog?.querySelector("[data-student-status]");
   const support = dialog?.querySelector("[data-student-support]");
-  if (!switcher || !card || !value || !cash || !condition || !badge || !checkout || !dialog || !form || !emailInput || !submit || !status || !support) return;
+  if (!switcher || !card || !value || !cash || !condition || !annualTotal || !comparison || !savings || !badge || !checkout || !dialog || !form || !emailInput || !submit || !status || !support) return;
 
   const options = Array.from(switcher.querySelectorAll("[data-student-option]"));
   const regularOption = options.find(option => option.dataset.studentOption === "no");
@@ -309,6 +313,9 @@ function initStudentPricing() {
     options.forEach(option => option.setAttribute("aria-pressed", String((option.dataset.studentOption === "yes") === isStudent)));
     value.textContent = isStudent ? "49,90" : "59,90";
     cash.textContent = isStudent ? "ou R$ 497 à vista" : "ou R$ 597 à vista";
+    annualTotal.textContent = isStudent ? "Total parcelado: R$ 598,80" : "Total parcelado: R$ 718,80";
+    comparison.innerHTML = isStudent ? "<span>Em 12 meses: <s>R$ 1.548 no mensal</s></span><strong>R$ 598,80 no anual</strong>" : "<span>Em 12 meses: <s>R$ 1.548 no mensal</s></span><strong>R$ 718,80 no anual</strong>";
+    savings.textContent = isStudent ? "Economize R$ 949,20 — mais de 7 mensalidades" : "Economize R$ 829,20 — mais de 6 mensalidades";
     condition.innerHTML = isStudent ? "<strong>Preço especial para aluno BIM Coder.</strong><span>R$ 497 à vista ou 12x de R$ 49,90 após confirmar seu e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 597/ano enquanto sua assinatura permanecer ativa.</span>";
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
