@@ -211,7 +211,7 @@
   Object.assign(copy.en, {
     "OFERTA ÚNICA DE FUNDADOR": "EXCLUSIVE FOUNDER OFFER",
     "OFERTA ÚNICA": "EXCLUSIVE OFFER",
-    "Todos os planos incluem as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "All plans include DocFlow ARQ tools and updates throughout the subscription.",
+    "O plano anual inclui todas as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "The annual plan includes all DocFlow ARQ tools and updates throughout the subscription.",
     "Cobrança mensal, sem compromisso anual.": "Monthly billing with no annual commitment.",
     "Em 12 meses:": "Over 12 months:",
     "Quero o plano mensal — R$ 109,90/mês": "I want the monthly plan — R$ 109.90/month",
@@ -243,7 +243,7 @@
   Object.assign(copy.es, {
     "OFERTA ÚNICA DE FUNDADOR": "OFERTA ÚNICA DE FUNDADOR",
     "OFERTA ÚNICA": "OFERTA ÚNICA",
-    "Todos os planos incluem as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "Todos los planes incluyen las herramientas de DocFlow ARQ y las actualizaciones durante la suscripción.",
+    "O plano anual inclui todas as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.": "El plan anual incluye todas las herramientas de DocFlow ARQ y las actualizaciones durante la suscripción.",
     "Cobrança mensal, sem compromisso anual.": "Facturación mensual sin compromiso anual.",
     "Em 12 meses:": "En 12 meses:",
     "Quero o plano mensal — R$ 109,90/mês": "Quiero el plan mensual — R$ 109,90/mes",
