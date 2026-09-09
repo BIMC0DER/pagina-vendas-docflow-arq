@@ -309,7 +309,7 @@ function initStudentPricing() {
     switcher.dataset.student = isStudent ? "yes" : "no";
     options.forEach(option => option.setAttribute("aria-pressed", String((option.dataset.studentOption === "yes") === isStudent)));
     value.textContent = isStudent ? "49,90" : "59,90";
-    savings.textContent = isStudent ? "Economize R$ 720 — mais de 6 mensalidades" : "Economize R$ 600 — mais de 5 mensalidades";
+    savings.innerHTML = isStudent ? "<span>Economize</span><strong>R$ 720</strong><span>— mais de 6 mensalidades</span>" : "<span>Economize</span><strong>R$ 600</strong><span>— mais de 5 mensalidades</span>";
     condition.innerHTML = isStudent ? "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE ALUNO BIM CODER</strong></div><p><strong>Preço especial para aluno BIM Coder.</strong> Após confirmar seu e-mail, você garante 12x de R$ 49,90.</p>" : "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE FUNDADOR</strong></div><p><strong>Garanta agora e mantenha o preço de fundador.</strong> Renove por R$ 597/ano enquanto sua assinatura permanecer ativa. Essa condição pode subir a qualquer momento.</p>";
     condition.classList.toggle("is-student", isStudent);
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";

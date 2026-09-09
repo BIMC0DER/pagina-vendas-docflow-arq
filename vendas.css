@@ -993,7 +993,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .annual-price-before>strong{position:relative;font-size:42px;letter-spacing:-.045em}
 .annual-price-before>strong::after{content:"";position:absolute;left:-5%;right:-5%;top:52%;height:4px;border-radius:99px;background:#ef3340;box-shadow:0 2px 10px rgba(239,51,64,.28);transform:rotate(-5deg) scaleX(0);transform-origin:left}
 .annual-price-before>em{flex-basis:100%;margin-top:5px;color:#68768a;font-size:11px;font-style:normal;font-weight:650;line-height:1.35}
-.annual-price-offer{position:absolute;left:0;bottom:0;display:flex;align-items:flex-end;gap:12px;width:100%;opacity:0;transform:translateY(13px) scale(.96);transform-origin:left bottom}
+.annual-price-offer{position:absolute;left:0;top:72px;display:flex;align-items:flex-end;justify-content:center;gap:12px;width:100%;opacity:0;transform:translateY(13px) scale(.96);transform-origin:center center}
 .annual-price-offer>span{margin-bottom:11px;color:#0b93a8;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 .annual-price-offer>div{display:flex;align-items:flex-end;gap:9px;min-width:0;line-height:.84}
 .annual-price-offer sup{flex:none;margin:0 0 9px;color:#0b93a8;font-size:19px;font-weight:900}
@@ -1011,8 +1011,9 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .price-monthly .button-outline:hover{border-color:#0b93a8;background:#f5fbfc}
 .annual-comparison{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:0!important;margin:0 0 10px!important;padding:12px 14px;border-radius:12px;background:#f5f7fa;color:#68768a!important;font-size:11px!important;line-height:1.4}
 .annual-comparison span{display:block}.annual-comparison s{color:#8a95a4}.annual-comparison strong{flex:none;color:#e4263f;font-size:13px}
-.savings-pill{min-height:0!important;margin:0 0 18px!important;padding:10px 14px;border:1px solid rgba(11,147,168,.28);border-radius:999px;background:linear-gradient(90deg,rgba(11,147,168,.08),rgba(109,69,217,.08));color:#087f98!important;font-size:11px!important;font-weight:850;text-align:center}
-.price-annual.is-student .savings-pill{border-color:rgba(109,69,217,.28);color:#5736bd!important}
+.savings-pill{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;min-height:0!important;margin:0 0 18px!important;padding:12px 16px;border:0;border-radius:14px;background:linear-gradient(105deg,#0797ad,#6845dc);box-shadow:0 12px 28px rgba(73,79,196,.2);color:#fff!important;font-size:11.5px!important;font-weight:800;text-align:center}
+.savings-pill strong{font-size:18px;font-weight:950;letter-spacing:-.025em}.savings-pill span:last-child{opacity:.92}
+.price-annual.is-student .savings-pill{background:linear-gradient(105deg,#5131b8,#794ee4);color:#fff!important}
 .price-annual.is-student{border-color:#6d45d9;box-shadow:0 28px 70px rgba(109,69,217,.13)}
 .price-annual.is-price-changing [data-price-value]{display:inline-block;animation:price-pop .35s ease}
 @keyframes normal-price-strike{to{transform:rotate(-5deg) scaleX(1)}}
