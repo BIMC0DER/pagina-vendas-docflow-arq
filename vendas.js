@@ -301,6 +301,11 @@ function initStudentPricing() {
   const support = dialog?.querySelector("[data-student-support]");
   if (!switcher || !card || !value || !condition || !savings || !badge || !checkout || !dialog || !form || !emailInput || !submit || !status || !support) return;
 
+  const setSupportLink = (email) => {
+    const message = `Olá, eu sou aluno BIM Coder mas não consegui ativar o desconto. E-mail: ${email}`;
+    support.href = `https://wa.me/5548988722197?text=${encodeURIComponent(message)}`;
+  };
+
   const options = Array.from(switcher.querySelectorAll("[data-student-option]"));
   const regularOption = options.find(option => option.dataset.studentOption === "no");
   const studentOption = options.find(option => option.dataset.studentOption === "yes");
@@ -360,6 +365,7 @@ function initStudentPricing() {
     }
 
     emailInput.removeAttribute("aria-invalid");
+    setSupportLink(email);
     submit.disabled = true;
     submit.textContent = "Verificando...";
     status.textContent = "Verificando seu e-mail de aluno...";
