@@ -1144,7 +1144,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 }
 
 /* Faixa ampla para a condição de fundador, inspirada no destaque editorial da oferta. */
-.founder-condition{display:grid;grid-template-columns:minmax(210px,.36fr) minmax(0,1fr);align-items:center;gap:24px;margin:22px 0 0;padding:20px 24px;border:1px solid rgba(255,91,61,.5);border-radius:20px;background:linear-gradient(105deg,rgba(255,102,70,.07),rgba(228,38,63,.025));box-shadow:0 16px 38px rgba(228,38,63,.07)}
+.founder-condition{display:grid;grid-template-columns:minmax(210px,.36fr) minmax(0,1fr);align-items:center;gap:24px;width:min(100%,585px);margin:22px auto 0;padding:20px 24px;border:1px solid rgba(255,91,61,.5);border-radius:20px;background:linear-gradient(105deg,rgba(255,102,70,.07),rgba(228,38,63,.025));box-shadow:0 16px 38px rgba(228,38,63,.07)}
 .founder-condition-label{display:flex;align-items:center;gap:9px;color:#e93b27;font-size:12px;font-weight:950;letter-spacing:.08em;white-space:nowrap}
 .founder-condition-label>span{width:13px;height:13px;border:3px solid #fff;border-radius:50%;background:#ff6546;box-shadow:0 0 0 2px rgba(255,101,70,.5)}
 .founder-condition p{margin:0;color:#17202c;font-size:13px;font-weight:650;line-height:1.55}
