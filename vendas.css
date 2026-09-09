@@ -987,18 +987,19 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .monthly-price>strong{font-size:72px;letter-spacing:-.07em}
 .monthly-price>small{margin:0 0 10px 9px;color:#59677a;font-size:15px;font-weight:750}
 .plan-description{min-height:0!important;margin:0 0 20px!important;color:#68768a!important;font-size:13px!important}
-.annual-price-stage{position:relative;min-height:164px;margin:0 0 8px}
-.annual-price-before{position:absolute;left:0;top:7px;display:flex;flex-wrap:wrap;align-items:baseline;gap:7px;color:#263344;line-height:1}
+.annual-price-stage{position:relative;min-height:190px;margin:0 0 8px}
+.annual-price-before{position:absolute;left:0;top:7px;display:flex;align-items:baseline;justify-content:center;gap:7px;width:100%;color:#263344;line-height:1;text-align:center}
 .annual-price-before>span{color:#68768a;font-size:13px;font-weight:750;text-transform:uppercase}
 .annual-price-before>strong{position:relative;font-size:42px;letter-spacing:-.045em}
 .annual-price-before>strong::after{content:"";position:absolute;left:-5%;right:-5%;top:52%;height:4px;border-radius:99px;background:#ef3340;box-shadow:0 2px 10px rgba(239,51,64,.28);transform:rotate(-5deg) scaleX(0);transform-origin:left}
 .annual-price-before>em{flex-basis:100%;margin-top:5px;color:#68768a;font-size:11px;font-style:normal;font-weight:650;line-height:1.35}
-.annual-price-offer{position:absolute;left:0;top:72px;display:flex;align-items:flex-end;justify-content:flex-start;gap:12px;width:100%;opacity:0;transform:translateY(13px) scale(.96);transform-origin:left center}
-.annual-price-offer>span{margin-bottom:11px;color:#0b93a8;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-.annual-price-offer>div{display:flex;align-items:flex-end;gap:9px;min-width:0;line-height:.84}
+.annual-price-offer{position:absolute;left:0;top:72px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;width:100%;opacity:0;transform:translateY(13px) scale(.96);transform-origin:center}
+.annual-price-offer-main{display:flex;align-items:flex-end;justify-content:center;gap:12px;width:100%}
+.annual-price-offer-main>span{margin-bottom:11px;color:#0b93a8;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.annual-price-offer-main>div{display:flex;align-items:flex-end;gap:9px;min-width:0;line-height:.84}
 .annual-price-offer sup{flex:none;margin:0 0 9px;color:#0b93a8;font-size:19px;font-weight:900}
 .annual-price-offer strong{display:inline-block;min-width:0;padding:0 .1em .06em 0;margin:0;background:linear-gradient(105deg,#0b93a8,#6d45d9);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:72px;line-height:.84;letter-spacing:-.075em;white-space:nowrap}
-.annual-price-offer small{margin:0 0 10px 9px;color:#4c5b6e;font-size:15px;font-weight:800}
+.annual-price-offer .annual-cash-price{margin:0;color:#68768a;font-size:11px;font-weight:750;line-height:1.2;text-transform:none}
 .price-annual.is-price-revealed .annual-price-before{animation:normal-price-dim .45s 1.05s ease forwards}
 .price-annual.is-price-revealed .annual-price-before>strong::after{animation:normal-price-strike .48s .72s cubic-bezier(.2,.8,.2,1) forwards}
 .price-annual.is-price-revealed .annual-price-offer{animation:discount-price-reveal .64s 1.22s cubic-bezier(.17,.84,.28,1.18) forwards}
@@ -1151,7 +1152,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .founder-condition p strong{color:#d72a31;font-weight:900}
 .founder-condition.is-student{border-color:rgba(109,69,217,.42);background:linear-gradient(105deg,rgba(109,69,217,.08),rgba(11,147,168,.025));box-shadow:0 16px 38px rgba(109,69,217,.07)}
 .founder-condition.is-student .founder-condition-label{color:#5736bd}.founder-condition.is-student .founder-condition-label>span{background:#6d45d9;box-shadow:0 0 0 2px rgba(109,69,217,.42)}.founder-condition.is-student p strong{color:#5736bd}
-@media(max-width:760px){.founder-condition{grid-template-columns:1fr;gap:12px;padding:18px}.founder-condition-label{font-size:11px}.annual-price-offer{gap:8px}.annual-price-offer>div{gap:7px}.annual-price-offer strong{font-size:clamp(50px,14vw,62px)}}
+@media(max-width:760px){.founder-condition{grid-template-columns:1fr;gap:12px;padding:18px}.founder-condition-label{font-size:11px}.annual-price-offer{gap:8px}.annual-price-offer-main{gap:8px}.annual-price-offer-main>div{gap:7px}.annual-price-offer strong{font-size:clamp(50px,14vw,62px)}}
 
 /* Assinatura da chegada do foguete com presença maior. */
 .launch-arrival .eyebrow{font-size:15px;font-weight:900;letter-spacing:.17em}

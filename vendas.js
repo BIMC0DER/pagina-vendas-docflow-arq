@@ -288,6 +288,7 @@ function initStudentPricing() {
   const switcher = document.querySelector("[data-student-switch]");
   const card = document.querySelector("[data-annual-price]");
   const value = card?.querySelector("[data-price-value]");
+  const cash = card?.querySelector("[data-price-cash]");
   const condition = document.querySelector("[data-price-condition]");
   const savings = card?.querySelector("[data-annual-savings]");
   const badge = card?.querySelector("[data-price-badge]");
@@ -298,7 +299,7 @@ function initStudentPricing() {
   const submit = dialog?.querySelector("[data-student-submit]");
   const status = dialog?.querySelector("[data-student-status]");
   const support = dialog?.querySelector("[data-student-support]");
-  if (!switcher || !card || !value || !condition || !savings || !badge || !checkout || !dialog || !form || !emailInput || !submit || !status || !support) return;
+  if (!switcher || !card || !value || !cash || !condition || !savings || !badge || !checkout || !dialog || !form || !emailInput || !submit || !status || !support) return;
 
   const setSupportLink = (email) => {
     const message = `Olá, eu sou aluno BIM Coder mas não consegui ativar o desconto. E-mail: ${email}`;
@@ -313,6 +314,7 @@ function initStudentPricing() {
     switcher.dataset.student = isStudent ? "yes" : "no";
     options.forEach(option => option.setAttribute("aria-pressed", String((option.dataset.studentOption === "yes") === isStudent)));
     value.textContent = isStudent ? "49,90" : "59,90";
+    cash.textContent = isStudent ? "ou R$ 497 à vista" : "ou R$ 597 à vista";
     savings.innerHTML = isStudent ? "<strong>38% OFF</strong><span>em relação ao plano anual sem desconto</span>" : "<strong>25% OFF</strong><span>em relação ao plano anual sem desconto</span>";
     condition.innerHTML = isStudent ? "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE ALUNO BIM CODER</strong></div><p><strong>Preço especial para aluno BIM Coder.</strong> Após confirmar seu e-mail, você garante 12x de R$ 49,90.</p>" : "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE FUNDADOR</strong></div><p><strong>Garanta agora e mantenha o preço de fundador.</strong> Renove por R$ 597/ano enquanto sua assinatura permanecer ativa. Condição exclusiva de lançamento que será encerrada a qualquer momento.</p>";
     condition.classList.toggle("is-student", isStudent);
