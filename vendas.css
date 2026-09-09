@@ -1152,3 +1152,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .founder-condition.is-student{border-color:rgba(109,69,217,.42);background:linear-gradient(105deg,rgba(109,69,217,.08),rgba(11,147,168,.025));box-shadow:0 16px 38px rgba(109,69,217,.07)}
 .founder-condition.is-student .founder-condition-label{color:#5736bd}.founder-condition.is-student .founder-condition-label>span{background:#6d45d9;box-shadow:0 0 0 2px rgba(109,69,217,.42)}.founder-condition.is-student p strong{color:#5736bd}
 @media(max-width:760px){.founder-condition{grid-template-columns:1fr;gap:12px;padding:18px}.founder-condition-label{font-size:11px}.annual-price-offer{gap:8px}.annual-price-offer>div{gap:7px}.annual-price-offer strong{font-size:clamp(50px,14vw,62px)}}
+
+/* Assinatura da chegada do foguete com presença maior. */
+.launch-arrival .eyebrow{font-size:15px;font-weight:900;letter-spacing:.17em}
+@media(max-width:680px){.launch-arrival .eyebrow{font-size:12px;letter-spacing:.13em}}
