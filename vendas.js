@@ -4,7 +4,7 @@ const STUDENT_VALIDATION = {
 };
 
 const CHECKOUTS = {
-  mensal: "",
+  mensal: "https://pay.hotmart.com/H107343223J?off=eb1rgnht",
   anual: "https://pay.hotmart.com/H107343223J?off=j0potk7j",
   aluno: "https://pay.hotmart.com/H107343223J?off=n8h1l3g4"
 };
