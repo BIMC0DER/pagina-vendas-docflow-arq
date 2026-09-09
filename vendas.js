@@ -289,7 +289,7 @@ function initStudentPricing() {
   const switcher = document.querySelector("[data-student-switch]");
   const card = document.querySelector("[data-annual-price]");
   const value = card?.querySelector("[data-price-value]");
-  const condition = card?.querySelector("[data-price-condition]");
+  const condition = document.querySelector("[data-price-condition]");
   const savings = card?.querySelector("[data-annual-savings]");
   const badge = card?.querySelector("[data-price-badge]");
   const checkout = card?.querySelector("[data-price-cta]");
@@ -309,8 +309,9 @@ function initStudentPricing() {
     switcher.dataset.student = isStudent ? "yes" : "no";
     options.forEach(option => option.setAttribute("aria-pressed", String((option.dataset.studentOption === "yes") === isStudent)));
     value.textContent = isStudent ? "49,90" : "59,90";
-    savings.textContent = isStudent ? "Economize R$ 949,20 — mais de 7 mensalidades" : "Economize R$ 829,20 — mais de 6 mensalidades";
-    condition.innerHTML = isStudent ? "<strong>Preço especial para aluno BIM Coder.</strong><span>12x de R$ 49,90 após confirmar seu e-mail.</span>" : "<strong>Preço de fundador garantido.</strong><span>Renove por R$ 597/ano enquanto sua assinatura permanecer ativa.</span>";
+    savings.textContent = isStudent ? "Economize R$ 720 — mais de 6 mensalidades" : "Economize R$ 600 — mais de 5 mensalidades";
+    condition.innerHTML = isStudent ? "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE ALUNO BIM CODER</strong></div><p><strong>Preço especial para aluno BIM Coder.</strong> Após confirmar seu e-mail, você garante 12x de R$ 49,90.</p>" : "<div class=\"founder-condition-label\"><span aria-hidden=\"true\"></span><strong>CONDIÇÃO DE FUNDADOR</strong></div><p><strong>Garanta agora e mantenha o preço de fundador.</strong> Renove por R$ 597/ano enquanto sua assinatura permanecer ativa. Essa condição pode subir a qualquer momento.</p>";
+    condition.classList.toggle("is-student", isStudent);
     badge.textContent = isStudent ? "OFERTA ALUNO" : "OFERTA ÚNICA";
     checkout.dataset.plan = isStudent ? "aluno" : "anual";
     checkout.textContent = isStudent ? "Quero a oferta de aluno — 12x de R$ 49,90" : "Quero a oferta anual — 12x de R$ 59,90";
