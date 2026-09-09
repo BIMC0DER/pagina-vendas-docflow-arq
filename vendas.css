@@ -1011,9 +1011,9 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .price-monthly .button-outline:hover{border-color:#0b93a8;background:#f5fbfc}
 .annual-comparison{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:0!important;margin:0 0 10px!important;padding:12px 14px;border-radius:12px;background:#f5f7fa;color:#68768a!important;font-size:11px!important;line-height:1.4}
 .annual-comparison span{display:block}.annual-comparison s{color:#8a95a4}.annual-comparison strong{flex:none;color:#e4263f;font-size:13px}
-.savings-pill{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;min-height:0!important;margin:0 0 18px!important;padding:12px 16px;border:0;border-radius:14px;background:linear-gradient(105deg,#0797ad,#6845dc);box-shadow:0 12px 28px rgba(73,79,196,.2);color:#fff!important;font-size:11.5px!important;font-weight:800;text-align:center}
-.savings-pill strong{font-size:18px;font-weight:950;letter-spacing:-.025em}.savings-pill span:last-child{opacity:.92}
-.price-annual.is-student .savings-pill{background:linear-gradient(105deg,#5131b8,#794ee4);color:#fff!important}
+.savings-pill{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;min-height:0!important;margin:0 0 18px!important;padding:11px 16px;border:2px solid #e4263f;border-radius:14px;background:transparent;box-shadow:0 8px 22px rgba(228,38,63,.09);color:#c90828!important;font-size:11.5px!important;font-weight:850;text-align:center}
+.savings-pill strong{color:#d9092a;font-size:19px;font-weight:950;letter-spacing:-.025em}.savings-pill span:last-child{color:#c90828}
+.price-annual.is-student .savings-pill{border-color:#e4263f;background:transparent;color:#c90828!important}
 .price-annual.is-student{border-color:#6d45d9;box-shadow:0 28px 70px rgba(109,69,217,.13)}
 .price-annual.is-price-changing [data-price-value]{display:inline-block;animation:price-pop .35s ease}
 @keyframes normal-price-strike{to{transform:rotate(-5deg) scaleX(1)}}
@@ -1156,3 +1156,13 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 /* Assinatura da chegada do foguete com presença maior. */
 .launch-arrival .eyebrow{font-size:15px;font-weight:900;letter-spacing:.17em}
 @media(max-width:680px){.launch-arrival .eyebrow{font-size:12px;letter-spacing:.13em}}
+
+/* CTA anual com tipografia maior e luz percorrendo o contorno. */
+@property --cta-circuit-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+.price-annual .checkout-link{position:relative;isolation:isolate;overflow:hidden;min-height:56px;font-size:14px;font-weight:900;letter-spacing:-.01em;box-shadow:0 14px 34px rgba(75,73,210,.22)}
+.price-annual .checkout-link::before{content:"";position:absolute;z-index:2;inset:0;padding:2px;border-radius:inherit;background:conic-gradient(from var(--cta-circuit-angle),transparent 0 70%,rgba(255,255,255,.18) 76%,#fff 82%,rgba(255,255,255,.2) 88%,transparent 94%);pointer-events:none;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:cta-circuit 2.8s linear infinite}
+.price-annual .checkout-link::after{content:"";position:absolute;z-index:1;top:-70%;left:-22%;width:12%;height:240%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transform:rotate(18deg);animation:cta-glint 3.8s ease-in-out infinite;pointer-events:none}
+@keyframes cta-circuit{to{--cta-circuit-angle:360deg}}
+@keyframes cta-glint{0%,58%{left:-22%;opacity:0}65%{opacity:1}86%{left:112%;opacity:.8}100%{left:112%;opacity:0}}
+@media(max-width:680px){.price-annual .checkout-link{min-height:54px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.price-annual .checkout-link::before,.price-annual .checkout-link::after{animation:none}.price-annual .checkout-link::before{display:none}}
