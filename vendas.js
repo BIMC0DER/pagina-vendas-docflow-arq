@@ -430,6 +430,9 @@ function initCheckoutLinks() {
     : [];
 
   document.querySelectorAll(".checkout-link").forEach((link) => {
+    const initialCheckout = CHECKOUTS[link.dataset.plan];
+    if (initialCheckout) link.href = appendTracking(initialCheckout);
+
     link.addEventListener("click", (event) => {
       const checkout = CHECKOUTS[link.dataset.plan];
       if (checkout) {
@@ -453,13 +456,38 @@ function initCheckoutLinks() {
   }
 }
 
+function readTrackingParams() {
+  const current = new URL(window.location.href);
+  const page = current.pathname.replace(/^\/|\/$/g, "") || "Home";
+  const referrer = document.referrer
+    ? document.referrer.replace(/^https?:\/\//, "")
+    : "";
+
+  return {
+    utm_source: current.searchParams.get("utm_source") || referrer || "Direto",
+    utm_medium: current.searchParams.get("utm_medium") || "Organico",
+    utm_campaign: current.searchParams.get("utm_campaign") || "Direto",
+    utm_content: current.searchParams.get("utm_content") || page,
+    utm_term: current.searchParams.get("utm_term") || "",
+    sck: current.searchParams.get("sck") || ""
+  };
+}
+
 function appendTracking(url) {
   const target = new URL(url);
-  const current = new URLSearchParams(window.location.search);
-  ["utm_source", "utm_medium", "utm_campaign", "utm_content", "sck"].forEach((key) => {
-    const value = current.get(key);
+  const tracking = readTrackingParams();
+  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+
+  utmKeys.forEach((key) => {
+    const value = tracking[key];
     if (value && !target.searchParams.has(key)) target.searchParams.set(key, value);
   });
+
+  if (target.hostname === "pay.hotmart.com" && !target.searchParams.has("sck")) {
+    const sck = tracking.sck || utmKeys.map((key) => tracking[key]).join("-");
+    if (sck) target.searchParams.set("sck", sck);
+  }
+
   return target.toString();
 }
 
