@@ -1165,3 +1165,16 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 @keyframes cta-glint{0%,58%{left:-22%;opacity:0}65%{opacity:1}86%{left:112%;opacity:.8}100%{left:112%;opacity:0}}
 @media(max-width:680px){.price-annual .checkout-link{min-height:54px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.price-annual .checkout-link::before,.price-annual .checkout-link::after{animation:none}.price-annual .checkout-link::before{display:none}}
+
+/* Prova social com os prints reais enviados por usuários. */
+.testimonials-section{position:relative;overflow:hidden;border-block:1px solid var(--line);background:#fff}
+.testimonials-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 650px 430px at 8% 18%,rgba(11,147,168,.07),transparent 72%),radial-gradient(ellipse 720px 460px at 92% 82%,rgba(109,69,217,.065),transparent 72%)}
+.testimonials-section>.container{position:relative}
+.testimonials-heading{max-width:850px;margin-bottom:52px}
+.testimonials-heading h2{margin-inline:auto;text-wrap:balance}
+.testimonials-wall{columns:3 300px;column-gap:22px}
+.testimonial-card{display:inline-block;width:100%;margin:0 0 22px;padding:8px;break-inside:avoid;border:1px solid rgba(13,17,23,.1);border-radius:18px;background:#fff;box-shadow:0 16px 42px rgba(13,17,23,.09);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.testimonial-card:hover{z-index:1;border-color:rgba(11,147,168,.27);box-shadow:0 24px 58px rgba(13,17,23,.14),0 0 28px rgba(11,147,168,.07);transform:translateY(-4px)}
+.testimonial-card img{width:100%;height:auto;border-radius:11px}
+@media(max-width:760px){.testimonials-heading{margin-bottom:34px}.testimonials-wall{columns:1}.testimonial-card{margin-bottom:16px;padding:6px;border-radius:15px}.testimonial-card img{border-radius:9px}}
+@media(prefers-reduced-motion:reduce){.testimonial-card{transition:none}.testimonial-card:hover{transform:none}}

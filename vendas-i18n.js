@@ -77,6 +77,7 @@
   };
 
   Object.assign(copy.en, {
+    "Experiências reais": "Real experiences", "O que estão falando do DocFlow ARQ": "What people are saying about DocFlow ARQ", "Depoimentos de usuários do DocFlow ARQ": "Testimonials from DocFlow ARQ users", "Depoimento de usuário do DocFlow ARQ": "Testimonial from a DocFlow ARQ user",
     "Comandos DocFlow": "DocFlow commands", "Clique em uma ferramenta": "Click a tool",
     "Configurações de cotas": "Dimension settings", "Configurar cotas": "Set up dimensions",
     "Cotas externas": "External dimensions", "Cotas internas": "Internal dimensions", "Por ambiente": "By room",
@@ -95,6 +96,7 @@
     "Crie e organize as pranchas do projeto em poucos cliques.": "Create and organize project sheets in a few clicks."
   });
   Object.assign(copy.es, {
+    "Experiências reais": "Experiencias reales", "O que estão falando do DocFlow ARQ": "Lo que dicen sobre DocFlow ARQ", "Depoimentos de usuários do DocFlow ARQ": "Testimonios de usuarios de DocFlow ARQ", "Depoimento de usuário do DocFlow ARQ": "Testimonio de un usuario de DocFlow ARQ",
     "Comandos DocFlow": "Comandos DocFlow", "Clique em uma ferramenta": "Haga clic en una herramienta",
     "Configurações de cotas": "Configuración de cotas", "Configurar cotas": "Configurar cotas",
     "Cotas externas": "Cotas exteriores", "Cotas internas": "Cotas interiores", "Por ambiente": "Por ambiente",
