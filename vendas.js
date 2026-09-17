@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveals();
   initPageEffects();
   initConfigCarousel();
+  initProjectCarousel();
   initCotasComparison();
   initDemonstrations();
   initConceptEntrance();
@@ -820,4 +821,108 @@ function initLaunchStory() {
   addEventListener('resize', schedule);
   motion.addEventListener('change', schedule);
   render();
+}
+
+function initProjectCarousel() {
+  const carousel = document.querySelector("[data-project-carousel]");
+  const stage = carousel?.querySelector("[data-project-stage]");
+  const slides = Array.from(carousel?.querySelectorAll("[data-project-slide]") || []);
+  if (!carousel || !stage || slides.length < 2) return;
+
+  const previous = carousel.querySelector("[data-project-prev]");
+  const next = carousel.querySelector("[data-project-next]");
+  const current = carousel.querySelector("[data-project-current]");
+  const total = carousel.querySelector("[data-project-total]");
+  const progress = carousel.querySelector("[data-project-progress]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeIndex = 0;
+  let frame = 0;
+  let dragging = false;
+  let moved = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  const centerLeft = (slide) => slide.offsetLeft - (stage.clientWidth - slide.clientWidth) / 2;
+  const nearestIndex = () => {
+    const center = stage.scrollLeft + stage.clientWidth / 2;
+    return slides.reduce((best, slide, index) => {
+      const distance = Math.abs(slide.offsetLeft + slide.clientWidth / 2 - center);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: 0, distance: Infinity }).index;
+  };
+  const render = (index) => {
+    activeIndex = Math.max(0, Math.min(slides.length - 1, index));
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+    if (current) current.textContent = String(activeIndex + 1);
+    if (total) total.textContent = String(slides.length);
+    if (progress) progress.style.width = String(((activeIndex + 1) / slides.length) * 100) + "%";
+  };
+  const goTo = (index, behavior = reducedMotion.matches ? "auto" : "smooth") => {
+    const target = Math.max(0, Math.min(slides.length - 1, index));
+    stage.scrollTo({ left: centerLeft(slides[target]), behavior });
+    render(target);
+  };
+  const sync = () => {
+    frame = 0;
+    render(nearestIndex());
+  };
+  const scheduleSync = () => {
+    if (!frame) frame = window.requestAnimationFrame(sync);
+  };
+
+  previous?.addEventListener("click", () => goTo(activeIndex - 1));
+  next?.addEventListener("click", () => goTo(activeIndex + 1));
+  stage.addEventListener("scroll", scheduleSync, { passive: true });
+  stage.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goTo(activeIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goTo(activeIndex + 1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      goTo(0);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      goTo(slides.length - 1);
+    }
+  });
+  slides.forEach((slide, index) => slide.addEventListener("click", () => {
+    if (!moved && index !== activeIndex) goTo(index);
+  }));
+
+  stage.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse") return;
+    dragging = true;
+    moved = false;
+    startX = event.clientX;
+    startScroll = stage.scrollLeft;
+    stage.classList.add("is-dragging");
+    stage.setPointerCapture(event.pointerId);
+  });
+  stage.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    const delta = event.clientX - startX;
+    if (Math.abs(delta) > 4) moved = true;
+    stage.scrollLeft = startScroll - delta;
+  });
+  const finishDrag = (event) => {
+    if (!dragging) return;
+    dragging = false;
+    stage.classList.remove("is-dragging");
+    if (stage.hasPointerCapture(event.pointerId)) stage.releasePointerCapture(event.pointerId);
+    goTo(nearestIndex());
+    window.setTimeout(() => { moved = false; }, 0);
+  };
+  stage.addEventListener("pointerup", finishDrag);
+  stage.addEventListener("pointercancel", finishDrag);
+  window.addEventListener("resize", () => goTo(activeIndex, "auto"));
+
+  render(0);
+  window.requestAnimationFrame(() => goTo(0, "auto"));
 }

@@ -1178,3 +1178,28 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .testimonial-card img{width:100%;height:auto;border-radius:11px}
 @media(max-width:760px){.testimonials-heading{margin-bottom:34px}.testimonials-wall{columns:1}.testimonial-card{margin-bottom:16px;padding:6px;border-radius:15px}.testimonial-card img{border-radius:9px}}
 @media(prefers-reduced-motion:reduce){.testimonial-card{transition:none}.testimonial-card:hover{transform:none}}
+/* Carrossel de projetos detalhados com imagem ativa centralizada. */
+.project-showcase-section{position:relative;overflow:hidden;border-top:1px solid var(--line);background:radial-gradient(ellipse 760px 440px at 50% 8%,rgba(11,147,168,.09),transparent 72%),#f6f8fb}
+.project-showcase-heading{max-width:900px;margin-bottom:46px}
+.project-showcase-heading h2{margin-inline:auto;text-wrap:balance}
+.project-showcase-heading p{max-width:720px;margin-inline:auto}
+.project-carousel{position:relative}
+.project-carousel-stage{display:flex;gap:clamp(16px,2.2vw,30px);width:min(1440px,calc(100vw - 12px));margin-inline:auto;padding:8px max(24px,calc((100% - min(82vw,860px))/2)) 30px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-padding-inline:max(24px,calc((100% - min(82vw,860px))/2));scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
+.project-carousel-stage::-webkit-scrollbar{display:none}
+.project-carousel-stage.is-dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.project-carousel-stage:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
+.project-slide{position:relative;flex:0 0 min(82vw,860px);display:grid;place-items:center;min-width:0;margin:0;overflow:hidden;aspect-ratio:16/10;border:1px solid rgba(13,17,23,.11);border-radius:22px;background:linear-gradient(145deg,#eef2f7,#fff);box-shadow:0 18px 48px rgba(13,17,23,.11);opacity:.48;scroll-snap-align:center;transform:scale(.91);transition:opacity .42s ease,transform .42s cubic-bezier(.2,.75,.2,1),box-shadow .42s ease,border-color .42s ease}
+.project-slide::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(11,147,168,.06),transparent 58%);pointer-events:none}
+.project-slide img{position:relative;z-index:1;width:100%;height:100%;padding:clamp(10px,1.5vw,20px);object-fit:contain;pointer-events:none}
+.project-slide.is-active{border-color:rgba(11,147,168,.35);box-shadow:0 30px 76px rgba(13,17,23,.17),0 0 34px rgba(11,147,168,.08);opacity:1;transform:none}
+.project-carousel-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:4px}
+.project-carousel-button{display:grid;width:46px;height:46px;place-items:center;padding:0;border:1px solid rgba(13,17,23,.12);border-radius:50%;background:#fff;color:var(--text);box-shadow:var(--shadow-sm);font-size:27px;line-height:1;cursor:pointer;transition:border-color .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease}
+.project-carousel-button:hover{border-color:rgba(11,147,168,.45);color:var(--cyan);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.project-carousel-button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.project-carousel-counter{min-width:66px;margin:0;color:var(--muted);font-size:15px;text-align:center;font-variant-numeric:tabular-nums}
+.project-carousel-counter strong{color:var(--cyan);font-size:18px}
+.project-carousel-progress{width:min(260px,55vw);height:3px;margin:16px auto 0;overflow:hidden;border-radius:99px;background:#dfe5ed}
+.project-carousel-progress span{display:block;width:14.285%;height:100%;border-radius:inherit;background:var(--gradient);transition:width .35s ease}
+.project-carousel-hint{margin:11px 0 0;color:var(--dim);font-size:12px;text-align:center}
+@media(max-width:680px){.project-showcase-heading{margin-bottom:30px}.project-carousel-stage{gap:14px;width:100%;padding-inline:6vw;scroll-padding-inline:6vw}.project-slide{flex-basis:88vw;aspect-ratio:4/3;border-radius:17px}.project-slide img{padding:9px}.project-carousel-controls{margin-top:0}.project-carousel-hint{padding-inline:24px}}
+@media(prefers-reduced-motion:reduce){.project-slide,.project-carousel-progress span{transition:none}}

@@ -77,6 +77,7 @@
   };
 
   Object.assign(copy.en, {
+    "Projetos reais": "Real projects", "Veja alguns projetos já detalhados com o DocFlow": "See projects already detailed with DocFlow", "Pranchas, vistas e detalhamentos produzidos por profissionais que já usam o DocFlow ARQ em seus projetos.": "Sheets, views, and details produced by professionals already using DocFlow ARQ in their projects.", "Arraste para explorar ou use as setas.": "Drag to explore or use the arrows.",
     "Experiências reais": "Real experiences", "O que estão falando do DocFlow ARQ": "What people are saying about DocFlow ARQ", "Depoimentos de usuários do DocFlow ARQ": "Testimonials from DocFlow ARQ users", "Depoimento de usuário do DocFlow ARQ": "Testimonial from a DocFlow ARQ user",
     "Comandos DocFlow": "DocFlow commands", "Clique em uma ferramenta": "Click a tool",
     "Configurações de cotas": "Dimension settings", "Configurar cotas": "Set up dimensions",
@@ -96,6 +97,7 @@
     "Crie e organize as pranchas do projeto em poucos cliques.": "Create and organize project sheets in a few clicks."
   });
   Object.assign(copy.es, {
+    "Projetos reais": "Proyectos reales", "Veja alguns projetos já detalhados com o DocFlow": "Vea proyectos ya detallados con DocFlow", "Pranchas, vistas e detalhamentos produzidos por profissionais que já usam o DocFlow ARQ em seus projetos.": "Láminas, vistas y detalles producidos por profesionales que ya utilizan DocFlow ARQ en sus proyectos.", "Arraste para explorar ou use as setas.": "Arrastre para explorar o use las flechas.",
     "Experiências reais": "Experiencias reales", "O que estão falando do DocFlow ARQ": "Lo que dicen sobre DocFlow ARQ", "Depoimentos de usuários do DocFlow ARQ": "Testimonios de usuarios de DocFlow ARQ", "Depoimento de usuário do DocFlow ARQ": "Testimonio de un usuario de DocFlow ARQ",
     "Comandos DocFlow": "Comandos DocFlow", "Clique em uma ferramenta": "Haga clic en una herramienta",
     "Configurações de cotas": "Configuración de cotas", "Configurar cotas": "Configurar cotas",
