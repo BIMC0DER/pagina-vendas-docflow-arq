@@ -1199,7 +1199,7 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .project-carousel-counter{min-width:66px;margin:0;color:var(--muted);font-size:15px;text-align:center;font-variant-numeric:tabular-nums}
 .project-carousel-counter strong{color:var(--cyan);font-size:18px}
 .project-carousel-progress{width:min(260px,55vw);height:3px;margin:16px auto 0;overflow:hidden;border-radius:99px;background:#dfe5ed}
-.project-carousel-progress span{display:block;width:14.285%;height:100%;border-radius:inherit;background:var(--gradient);transition:width .35s ease}
+.project-carousel-progress span{display:block;width:12.5%;height:100%;border-radius:inherit;background:var(--gradient);transition:width .35s ease}
 .project-carousel-hint{margin:11px 0 0;color:var(--dim);font-size:12px;text-align:center}
 @media(max-width:680px){.project-showcase-heading{margin-bottom:30px}.project-carousel-stage{gap:14px;width:100%;padding-inline:9vw;scroll-padding-inline:9vw}.project-slide{flex-basis:82vw;aspect-ratio:4/3;border-radius:17px}.project-slide img{padding:9px}.project-carousel-controls{margin-top:0}.project-carousel-hint{padding-inline:24px}}
 @media(prefers-reduced-motion:reduce){.project-slide,.project-carousel-progress span{transition:none}}
