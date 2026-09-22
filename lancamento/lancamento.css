@@ -46,57 +46,71 @@
   box-shadow: 0 28px 70px rgba(109, 69, 217, .13);
 }
 
-.launch-price-card[data-plan-active="mensal"] .launch-price-kicker,
-.launch-price-card[data-plan-active="mensal"] .launch-price-value { color: #6d45d9; }
+.launch-price-card[data-plan-active="mensal"] .launch-price-kicker { color: #6d45d9; }
 
 .launch-price-card[data-plan-active="mensal"] .best-badge { background: linear-gradient(105deg, #6d45d9, #8468ee); }
 
 .launch-price-stage {
-  display: grid;
-  justify-items: center;
-  gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
   min-height: 150px;
   margin: 22px 0 12px;
   text-align: center;
 }
 
 .launch-price-kicker {
+  flex: 0 0 auto;
+  max-width: 118px;
   color: #0b93a8;
   font-size: 11px;
   font-weight: 900;
   letter-spacing: .1em;
-  text-align: center;
+  line-height: 1.25;
+  text-align: right;
   text-transform: uppercase;
 }
 
 .launch-price-line {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   line-height: .82;
 }
 
-.launch-price-line sup {
-  margin: 0 8px 10px 0;
-  color: inherit;
-  font-size: 24px;
-  font-weight: 900;
-}
-
+.launch-price-line sup,
 .launch-price-value {
-  color: #0b93a8;
+  display: inline-block;
+  background: linear-gradient(105deg, #0b9bb0, #6d45d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: clamp(64px, 8vw, 82px);
   font-weight: 950;
+  line-height: .84;
   letter-spacing: -.075em;
   white-space: nowrap;
 }
 
+.launch-price-line sup {
+  align-self: center;
+  margin: 0 5px 0 0;
+  padding-bottom: .04em;
+}
+
+.launch-price-value {
+  padding: 0 .08em .04em 0;
+}
+
 .launch-price-period {
-  margin: 0 0 9px 10px;
+  align-self: flex-end;
+  margin: 0 0 9px 8px;
   color: #667386;
   font-size: 14px;
   font-weight: 800;
+  line-height: 1;
 }
 
 .launch-plan-description {
@@ -127,8 +141,9 @@
 
 @media (max-width: 560px) {
   .launch-plan-switch { width: 100%; }
-  .launch-price-line sup { margin-bottom: 8px; font-size: 21px; }
-  .launch-price-value { font-size: 62px; }
+  .launch-price-stage { flex-direction: column; gap: 12px; }
+  .launch-price-kicker { max-width: none; text-align: center; }
+  .launch-price-line sup, .launch-price-value { font-size: 62px; }
   .launch-price-period { margin-bottom: 7px; font-size: 13px; }
 }
 
