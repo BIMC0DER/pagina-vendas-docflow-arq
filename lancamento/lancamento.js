@@ -6,26 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = {
     anual: {
       badge: "MAIS VANTAJOSO",
-      name: "Plano anual",
-      note: "Melhor custo-benefício",
       kicker: "por apenas 12x de",
       price: "79,90",
       period: "",
-      saving: "Desconto de R$ 200",
-      comparison: "em relação a 12 meses no plano mensal",
+      saving: "R$ 200 OFF",
       description: "Acesso completo durante 1 ano, com cobrança anual parcelada.",
       cta: "Quero o plano anual — 12x de R$ 79,90",
       plan: "anual"
     },
     mensal: {
       badge: "MAIS FLEXÍVEL",
-      name: "Plano mensal",
-      note: "Sem compromisso anual",
       kicker: "pagamento mensal de",
       price: "99",
       period: "/ mês",
       saving: "24% mais caro",
-      comparison: "que o valor mensal equivalente do plano anual",
       description: "R$ 99 por mês, sem compromisso. Cancele quando quiser.",
       cta: "Quero o plano mensal — R$ 99/mês",
       plan: "mensal"
@@ -34,13 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fields = {
     badge: card.querySelector("[data-launch-badge]"),
-    name: card.querySelector("[data-launch-name]"),
-    note: card.querySelector("[data-launch-note]"),
     kicker: card.querySelector("[data-launch-kicker]"),
     price: card.querySelector("[data-launch-price]"),
     period: card.querySelector("[data-launch-period]"),
     saving: card.querySelector("[data-launch-saving]"),
-    comparison: card.querySelector("[data-launch-comparison]"),
     description: card.querySelector("[data-launch-description]"),
     checkout: card.querySelector("[data-launch-checkout]")
   };

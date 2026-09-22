@@ -46,7 +46,6 @@
   box-shadow: 0 28px 70px rgba(109, 69, 217, .13);
 }
 
-.launch-price-card[data-plan-active="mensal"] .plan-name,
 .launch-price-card[data-plan-active="mensal"] .launch-price-kicker,
 .launch-price-card[data-plan-active="mensal"] .launch-price-value { color: #6d45d9; }
 
@@ -54,9 +53,11 @@
 
 .launch-price-stage {
   display: grid;
-  gap: 10px;
-  min-height: 133px;
-  margin: 4px 0 12px;
+  justify-items: center;
+  gap: 12px;
+  min-height: 150px;
+  margin: 22px 0 12px;
+  text-align: center;
 }
 
 .launch-price-kicker {
@@ -64,12 +65,15 @@
   font-size: 11px;
   font-weight: 900;
   letter-spacing: .1em;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .launch-price-line {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  width: 100%;
   line-height: .82;
 }
 
@@ -102,7 +106,11 @@
   font-size: 13px !important;
 }
 
-.launch-savings-pill { margin-bottom: 17px !important; }
+.launch-savings-pill {
+  justify-content: center;
+  margin-bottom: 17px !important;
+  text-align: center;
+}
 
 .launch-savings-pill strong { font-size: 17px; }
 
