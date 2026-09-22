@@ -1,0 +1,131 @@
+.launch-plan-switch {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 430px);
+  margin: 28px auto 8px;
+  padding: 5px;
+  border: 1px solid rgba(13, 17, 23, .1);
+  border-radius: 15px;
+  background: #e9edf2;
+  box-shadow: inset 0 1px 2px rgba(32, 48, 74, .07);
+}
+
+.launch-plan-switch button {
+  position: relative;
+  z-index: 1;
+  min-height: 46px;
+  border: 0;
+  border-radius: 11px;
+  background: transparent;
+  color: #667386;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.launch-plan-switch button[aria-pressed="true"] {
+  background: #fff;
+  color: #0b93a8;
+  box-shadow: 0 7px 20px rgba(32, 48, 74, .12);
+}
+
+.launch-pricing-options { margin-top: 24px; }
+
+.launch-price-card {
+  overflow: visible;
+  border-color: #0b93a8;
+  box-shadow: 0 28px 70px rgba(11, 147, 168, .14);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.launch-price-card[data-plan-active="mensal"] {
+  border-color: #6d45d9;
+  box-shadow: 0 28px 70px rgba(109, 69, 217, .13);
+}
+
+.launch-price-card[data-plan-active="mensal"] .plan-name,
+.launch-price-card[data-plan-active="mensal"] .launch-price-kicker,
+.launch-price-card[data-plan-active="mensal"] .launch-price-value { color: #6d45d9; }
+
+.launch-price-card[data-plan-active="mensal"] .best-badge { background: linear-gradient(105deg, #6d45d9, #8468ee); }
+
+.launch-price-stage {
+  display: grid;
+  gap: 10px;
+  min-height: 133px;
+  margin: 4px 0 12px;
+}
+
+.launch-price-kicker {
+  color: #0b93a8;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.launch-price-line {
+  display: flex;
+  align-items: flex-end;
+  line-height: .82;
+}
+
+.launch-price-line sup {
+  margin: 0 8px 10px 0;
+  color: inherit;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.launch-price-value {
+  color: #0b93a8;
+  font-size: clamp(64px, 8vw, 82px);
+  font-weight: 950;
+  letter-spacing: -.075em;
+  white-space: nowrap;
+}
+
+.launch-price-period {
+  margin: 0 0 9px 10px;
+  color: #667386;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.launch-plan-description {
+  min-height: 42px !important;
+  margin: 0 0 18px !important;
+  color: #68768a !important;
+  font-size: 13px !important;
+}
+
+.launch-savings-pill { margin-bottom: 17px !important; }
+
+.launch-savings-pill strong { font-size: 17px; }
+
+.launch-price-card.is-changing .launch-price-stage,
+.launch-price-card.is-changing .launch-savings-pill,
+.launch-price-card.is-changing .launch-plan-description {
+  animation: launch-price-swap .35s ease;
+}
+
+@keyframes launch-price-swap {
+  0% { opacity: .25; transform: translateY(7px); }
+  100% { opacity: 1; transform: none; }
+}
+
+@media (max-width: 560px) {
+  .launch-plan-switch { width: 100%; }
+  .launch-price-line sup { margin-bottom: 8px; font-size: 21px; }
+  .launch-price-value { font-size: 62px; }
+  .launch-price-period { margin-bottom: 7px; font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-price-card.is-changing .launch-price-stage,
+  .launch-price-card.is-changing .launch-savings-pill,
+  .launch-price-card.is-changing .launch-plan-description { animation: none; }
+}
