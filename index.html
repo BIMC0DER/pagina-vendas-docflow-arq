@@ -18,6 +18,7 @@
   <meta property="og:title" content="Cotas, vistas e pranchas com poucos cliques">
   <meta property="og:description" content="DocFlow ARQ: ferramentas para agilizar a documentação de arquitetura dentro do Revit.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://docflow-arq.bimcoder.net/">
   <meta property="og:image" content="https://docflow.bimcoder.net/media/docflow-og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cotas, vistas e pranchas com poucos cliques">
@@ -27,6 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="vendas.css?v=66">
+  <link rel="stylesheet" href="lancamento/lancamento.css?v=3">
 </head>
 <body>
   <header class="site-header">
@@ -51,7 +53,7 @@
 
   <main id="topo">
     <section class="hero concept-hero">
-      <div class="launch-offer-ribbon" aria-hidden="true"><span class="offer-ribbon-track"><span class="offer-ribbon-group"><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i></span><span class="offer-ribbon-group"><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i><b>OFERTA ÚNICA DE FUNDADOR</b><i>◆</i></span></span></div>
+      <div class="launch-offer-ribbon" aria-hidden="true"><span class="offer-ribbon-track"><span class="offer-ribbon-group"><b>OFERTA DE LANÇAMENTO</b><i>◆</i><b>OFERTA DE LANÇAMENTO</b><i>◆</i><b>OFERTA DE LANÇAMENTO</b><i>◆</i></span><span class="offer-ribbon-group"><b>OFERTA DE LANÇAMENTO</b><i>◆</i><b>OFERTA DE LANÇAMENTO</b><i>◆</i><b>OFERTA DE LANÇAMENTO</b><i>◆</i></span></span></div>
       <div class="concept-background" aria-hidden="true"><img src="media/hero-detalhes.jpg" alt="" fetchpriority="high"><div class="concept-wash"></div></div>
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -62,7 +64,7 @@
             <li><svg class="benefit-icon benefit-growth" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="growth-axes" d="M4 5v23h24"/><path class="growth-line" pathLength="1" d="m8 23 6-8 5 4 9-12"/><path class="growth-tip" d="M21 7h7v7"/></svg><span>Ganhe tempo para projetar e focar no que realmente importa.</span></li>
           </ul>
           <div class="hero-actions">
-            <a class="button button-primary" href="#planos">Garantir preço de fundador</a>
+            <a class="button button-primary" href="#planos">Conhecer os planos</a>
           </div>
         </div>
       </div>
@@ -400,48 +402,39 @@
       <div class="container pricing-container">
         <div class="section-heading center-heading pricing-heading">
           <span class="eyebrow">Escolha seu plano</span>
-
-          <p>O plano anual inclui todas as ferramentas do DocFlow ARQ e as atualizações durante a assinatura.</p>
+          <h2>Leve o DocFlow para os seus próximos projetos.</h2>
+          <p>Os dois planos incluem todas as ferramentas do DocFlow ARQ, atualizações e atendimento durante a assinatura.</p>
         </div>
 
-        <div class="student-price-row">
-          <div class="student-switch" data-student-switch data-student="no" role="group" aria-label="Condição de compra">
-            <span class="student-switch-indicator" aria-hidden="true"></span>
-            <button type="button" data-student-option="no" aria-pressed="true">NÃO SOU ALUNO</button>
-            <button type="button" data-student-option="yes" aria-pressed="false" aria-haspopup="dialog" aria-controls="studentValidationDialog">SOU ALUNO BIM CODER</button>
-          </div>
+        <div class="launch-plan-switch" data-launch-plan-switch role="group" aria-label="Escolha o período da assinatura">
+          <button type="button" data-launch-plan="anual" aria-pressed="true">Anual</button>
+          <button type="button" data-launch-plan="mensal" aria-pressed="false">Mensal</button>
         </div>
 
-        <div class="pricing-options">
-          <article class="price-card price-featured price-annual" data-annual-price>
-            <span class="best-badge"><strong data-price-badge>OFERTA ÚNICA</strong></span>
-            <div class="plan-card-head"><span class="plan-name">Plano anual</span><small>Valor inédito exclusivo do lançamento</small></div>
-            <div class="annual-price-stage" aria-live="polite">
-              <div class="annual-price-before"><span>De 12x de</span><strong>R$ 79,90</strong></div>
-              <div class="annual-price-offer"><span>por 12x de</span><sup>R$</sup><strong data-price-value>59,90</strong><small class="annual-cash-price" data-price-cash>ou R$ 597 à vista</small></div>
+        <div class="pricing-options launch-pricing-options">
+          <article class="price-card price-featured launch-price-card" data-launch-price-card data-plan-active="anual">
+            <span class="best-badge"><strong data-launch-badge>MAIS VANTAJOSO</strong></span>
+            <div class="launch-price-stage" aria-live="polite">
+              <span class="launch-price-kicker" data-launch-kicker>por apenas 12x de</span>
+              <div class="launch-price-line"><sup>R$</sup><strong class="launch-price-value" data-launch-price>79,90</strong><small class="launch-price-period" data-launch-period></small></div>
             </div>
-            <p class="savings-pill" data-annual-savings><strong>25% OFF</strong><span>em relação ao plano anual sem desconto</span></p>
+            <p class="savings-pill launch-savings-pill"><strong data-launch-saving>R$ 200 OFF</strong></p>
+            <p class="launch-plan-description" data-launch-description>Acesso completo durante 1 ano, com cobrança anual parcelada.</p>
             <ul class="compact-plan-features">
               <li>Todos os comandos do DocFlow ARQ</li>
               <li>Atualizações e atendimento</li>
-              <li>15 dias de garantia exclusiva para fundadores</li>
+              <li>7 dias de garantia</li>
             </ul>
-            <a class="button button-primary checkout-link" href="#" data-plan="anual" data-price-cta>Quero garantir o desconto de fundador</a>
+            <a class="button button-primary" href="https://pay.hotmart.com/H107343223J?off=j0potk7j" data-launch-checkout data-anual-url="https://pay.hotmart.com/H107343223J?off=j0potk7j" data-mensal-url="https://pay.hotmart.com/H107343223J?off=eb1rgnht">Quero o plano anual — 12x de R$ 79,90</a>
           </article>
         </div>
 
-        <aside class="founder-condition" data-price-condition aria-live="polite">
-          <div class="founder-condition-label"><span aria-hidden="true"></span><strong>CONDIÇÃO DE FUNDADOR</strong></div>
-          <p><strong>Garanta agora e mantenha o preço de fundador.</strong> Renove por R$ 597/ano enquanto sua assinatura permanecer ativa. Condição exclusiva de lançamento que será encerrada a qualquer momento.</p>
-        </aside>
-
         <p class="pricing-note">Licença individual · ativação pelo e-mail da compra · compatível com Revit 2023 a 2027</p>
       </div>
-    </section>
-<section class="guarantee-section">
+    </section><section class="guarantee-section">
       <div class="container guarantee">
-        <div class="shield" aria-hidden="true">15</div>
-        <div><span class="eyebrow">Garantia exclusiva para fundadores</span><h2>Experimente as ferramentas no seu projeto por 15 dias.</h2><p>Ao garantir a condição de fundador, você tem 15 dias para experimentar as ferramentas de cotas, vistas e pranchas em um projeto seu. Se não fizer sentido para sua rotina, solicite o reembolso dentro desse prazo.</p></div>
+        <div class="shield" aria-hidden="true">7</div>
+        <div><span class="eyebrow">Compra protegida</span><h2>Experimente as ferramentas no seu projeto por 7 dias.</h2><p>Você tem 7 dias para experimentar as ferramentas de cotas, vistas e pranchas em um projeto seu. Se não fizer sentido para sua rotina, solicite o reembolso dentro desse prazo.</p></div>
       </div>
     </section>
 
@@ -454,13 +447,13 @@
         <details><summary>Posso usar no padrão do meu escritório?</summary><p>Você pode ajustar as opções das ferramentas e usar modelos de organização de pranchas. Nas cotas de famílias, o resultado depende das referências disponíveis em cada família do projeto.</p></details>
         <details><summary>Preciso ficar conectado o tempo inteiro?</summary><p>A internet é necessária para ativação e revalidações periódicas da assinatura. O plugin mantém uma tolerância protegida para indisponibilidades temporárias.</p></details>
         <details><summary>O DocFlow documenta o projeto inteiro sozinho?</summary><p>Você escolhe as ferramentas e configura cada tarefa. O DocFlow ajuda a gerar cotas, vistas e pranchas; a escolha do que documentar e a revisão técnica continuam com você.</p></details>
-        <details><summary>Como funciona a oferta de fundador?</summary><p>A oferta de fundador garante o plano anual por R$ 597 à vista ou em 12x de R$ 59,90, além de uma garantia exclusiva de 15 dias. Você mantém a renovação por R$ 597/ano enquanto a assinatura permanecer ativa. Alunos BIM Coder elegíveis pagam R$ 497 à vista ou 12x de R$ 49,90. Se cancelar e voltar depois, será aplicado o preço vigente.</p></details>
+        <details><summary>Qual é a diferença entre os planos?</summary><p>No plano anual, você paga 12x de R$ 79,90 e economiza R$ 200 em comparação com 12 meses no plano mensal. No plano mensal, você paga R$ 99 por mês, sem compromisso, e pode cancelar quando quiser.</p></details>
         <details><summary>Como recebo o plugin?</summary><p>Depois da confirmação da compra, você recebe as orientações de acesso e ativa o DocFlow usando o mesmo e-mail do checkout.</p></details>
       </div>
     </section>
 
     <section class="final-cta">
-      <div class="container"><span class="eyebrow">Seu próximo projeto</span><h2>Dedique mais tempo ao projeto.<br><span>Resolva as tarefas repetitivas com poucos cliques.</span></h2><a class="button button-primary" href="#planos">Quero documentar em poucos cliques</a><p>15 dias de garantia para fundadores · Revit 2023 a 2027 · suporte em português</p></div>
+      <div class="container"><span class="eyebrow">Seu próximo projeto</span><h2>Dedique mais tempo ao projeto.<br><span>Resolva as tarefas repetitivas com poucos cliques.</span></h2><a class="button button-primary" href="#planos">Quero documentar em poucos cliques</a><p>7 dias de garantia · Revit 2023 a 2027 · suporte em português</p></div>
     </section>
   </main>
 
@@ -470,22 +463,10 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M27.4 4.6A15.8 15.8 0 0 0 2.6 23.7L.5 31.5l8-2.1A15.7 15.7 0 0 0 16 31.3h.1A15.8 15.8 0 0 0 27.4 4.6ZM16.1 28.7a13 13 0 0 1-6.6-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a13.1 13.1 0 1 1 10.8 6Zm7.2-9.8c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.7-.2-1 .2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-2.4-1.2-4-2.1-5.6-4.8-.4-.7.4-.7 1.2-2.2.1-.3.1-.6 0-.8-.1-.2-1-2.5-1.4-3.4-.4-.9-.8-.8-1-.8h-.9c-.3 0-.8.1-1.2.6-.4.4-1.7 1.6-1.7 4s1.8 4.6 2 4.9c.2.3 3.5 5.3 8.4 7.4 3.1 1.3 4.3 1.4 5.8 1.2.9-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.5-.3-.9-.5Z"/></svg>
     <span>Falar pelo WhatsApp</span>
   </a>
-
-  <dialog id="studentValidationDialog" class="student-validation-dialog">
-    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-    <span class="eyebrow">Condição para aluno BIM Coder</span>
-    <h2>Confirme seu e-mail de aluno</h2>
-    <p>Digite o mesmo e-mail usado na sua compra pela Hotmart.</p>
-    <form id="studentValidationForm" novalidate>
-      <label for="studentEmail">E-mail usado na Hotmart</label>
-      <input id="studentEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@exemplo.com" required>
-      <button class="button button-primary" type="submit" data-student-submit>Validar e continuar</button>
-    </form>
-    <p class="student-validation-status" data-student-status aria-live="polite"></p>
-    <a class="student-support-link" data-student-support href="https://wa.me/5548988722197" target="_blank" rel="noopener noreferrer" hidden>Falar com o suporte no WhatsApp</a>
-  </dialog>
-  <script src="vendas-videos.js?v=17"></script>
+  <script src="lancamento/lancamento-videos.js?v=1"></script>
   <script src="vendas.js?v=53"></script>
   <script src="vendas-i18n.js?v=41"></script>
+  <script src="lancamento/lancamento.js?v=2"></script>
+  <script src="lancamento/lancamento-i18n.js?v=2"></script>
 </body>
 </html>
