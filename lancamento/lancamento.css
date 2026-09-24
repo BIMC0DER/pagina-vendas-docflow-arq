@@ -51,24 +51,21 @@
 .launch-price-card[data-plan-active="mensal"] .best-badge { background: linear-gradient(105deg, #6d45d9, #8468ee); }
 
 .launch-price-stage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 11px;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
   min-height: 150px;
   margin: 22px 0 12px;
   text-align: center;
 }
 
 .launch-price-kicker {
-  flex: 0 0 auto;
-  max-width: 118px;
   color: #0b93a8;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
-  letter-spacing: .1em;
+  letter-spacing: .11em;
   line-height: 1.25;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -76,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 100%;
   line-height: .82;
 }
 
@@ -87,26 +84,28 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: clamp(64px, 8vw, 82px);
+  font-family: inherit;
   font-weight: 950;
   line-height: .84;
-  letter-spacing: -.075em;
   white-space: nowrap;
 }
 
 .launch-price-line sup {
-  align-self: center;
-  margin: 0 5px 0 0;
-  padding-bottom: .04em;
+  margin: 0 12px 0 0;
+  padding-bottom: .02em;
+  font-size: clamp(38px, 5vw, 52px);
+  letter-spacing: -.045em;
 }
 
 .launch-price-value {
   padding: 0 .08em .04em 0;
+  font-size: clamp(76px, 9vw, 92px);
+  letter-spacing: -.065em;
 }
 
 .launch-price-period {
   align-self: flex-end;
-  margin: 0 0 9px 8px;
+  margin: 0 0 10px 10px;
   color: #667386;
   font-size: 14px;
   font-weight: 800;
@@ -122,11 +121,26 @@
 
 .launch-savings-pill {
   justify-content: center;
-  margin-bottom: 17px !important;
+  min-height: 64px !important;
+  margin-bottom: 20px !important;
+  border: 0 !important;
+  background: linear-gradient(105deg, #f0143a, #d5002f) !important;
+  box-shadow: 0 14px 30px rgba(222, 0, 48, .24) !important;
+  color: #fff !important;
   text-align: center;
 }
 
-.launch-savings-pill strong { font-size: 17px; }
+.launch-savings-pill strong {
+  color: #fff !important;
+  font-size: 23px;
+  font-weight: 950;
+  letter-spacing: -.02em;
+}
+
+.launch-price-card[data-plan-active="mensal"] .launch-savings-pill {
+  background: linear-gradient(105deg, #5f44d8, #805ce7) !important;
+  box-shadow: 0 14px 30px rgba(95, 68, 216, .22) !important;
+}
 
 .launch-price-card.is-changing .launch-price-stage,
 .launch-price-card.is-changing .launch-savings-pill,
@@ -141,10 +155,13 @@
 
 @media (max-width: 560px) {
   .launch-plan-switch { width: 100%; }
-  .launch-price-stage { flex-direction: column; gap: 12px; }
-  .launch-price-kicker { max-width: none; text-align: center; }
-  .launch-price-line sup, .launch-price-value { font-size: 62px; }
-  .launch-price-period { margin-bottom: 7px; font-size: 13px; }
+  .launch-price-stage { gap: 12px; min-height: 138px; }
+  .launch-price-kicker { font-size: 11px; }
+  .launch-price-line sup { margin-right: 9px; font-size: 36px; }
+  .launch-price-value { font-size: 72px; }
+  .launch-price-period { margin-bottom: 8px; font-size: 13px; }
+  .launch-savings-pill { min-height: 58px !important; }
+  .launch-savings-pill strong { font-size: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
