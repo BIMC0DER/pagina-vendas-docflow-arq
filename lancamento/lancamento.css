@@ -51,11 +51,18 @@
 .launch-price-card[data-plan-active="mensal"] .best-badge { background: linear-gradient(105deg, #6d45d9, #8468ee); }
 .launch-price-card .best-badge {
   top: -17px;
-  right: 18px;
+  right: auto;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 36px;
   padding: 0 16px;
+  background: linear-gradient(105deg, #d90024, #f20d3a);
   font-size: 10px;
   letter-spacing: .045em;
+  text-align: center;
+  transform: translateX(-50%);
   white-space: nowrap;
 }
 
@@ -134,7 +141,7 @@
 }
 
 @media (max-width: 560px) {
-  .launch-price-card .best-badge { top: -16px; right: 12px; max-width: calc(100% - 24px); min-height: 34px; padding-inline: 13px; font-size: 9px; }
+  .launch-price-card .best-badge { top: -16px; right: auto; left: 50%; max-width: calc(100% - 24px); min-height: 34px; padding-inline: 13px; font-size: 9px; transform: translateX(-50%); }
   .launch-plan-switch { width: 100%; }
   .launch-price-stage { gap: 12px; min-height: 138px; }
   .launch-price-kicker { font-size: 11px; }
