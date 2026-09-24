@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     anual: {
       badge: "MAIS VANTAJOSO",
       kicker: "por apenas 12x de",
-      price: "79,90",
+      price: "79",
       period: "",
       saving: "R$ 200 OFF",
       description: "Acesso completo durante 1 ano, com cobrança anual parcelada.",
-      cta: "Quero o plano anual — 12x de R$ 79,90",
+      cta: "Quero o plano anual — 12x de R$ 79",
       plan: "anual"
     },
     mensal: {
