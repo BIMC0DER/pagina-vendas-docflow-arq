@@ -5,11 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const content = {
     anual: {
-      badge: "MAIS VANTAJOSO",
+      badge: "R$ 200 OFF - MAIS VANTAJOSO",
       kicker: "por apenas 12x de",
       price: "79",
       period: "",
-      saving: "R$ 200 OFF",
       description: "Acesso completo durante 1 ano, com cobrança anual parcelada.",
       cta: "Quero o plano anual — 12x de R$ 79",
       plan: "anual"
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       kicker: "pagamento mensal de",
       price: "99",
       period: "/ mês",
-      saving: "",
       description: "R$ 99 por mês, sem compromisso. Cancele quando quiser.",
       cta: "Quero o plano mensal — R$ 99/mês",
       plan: "mensal"
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     kicker: card.querySelector("[data-launch-kicker]"),
     price: card.querySelector("[data-launch-price]"),
     period: card.querySelector("[data-launch-period]"),
-    saving: card.querySelector("[data-launch-saving]"),
     description: card.querySelector("[data-launch-description]"),
     checkout: card.querySelector("[data-launch-checkout]")
   };

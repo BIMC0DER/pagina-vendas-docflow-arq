@@ -49,6 +49,15 @@
 .launch-price-card[data-plan-active="mensal"] .launch-price-kicker { color: #6d45d9; }
 
 .launch-price-card[data-plan-active="mensal"] .best-badge { background: linear-gradient(105deg, #6d45d9, #8468ee); }
+.launch-price-card .best-badge {
+  top: -17px;
+  right: 18px;
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 10px;
+  letter-spacing: .045em;
+  white-space: nowrap;
+}
 
 .launch-price-stage {
   display: grid;
@@ -119,30 +128,7 @@
   font-size: 13px !important;
 }
 
-.launch-savings-pill {
-  justify-content: center;
-  min-height: 64px !important;
-  margin-bottom: 20px !important;
-  border: 0 !important;
-  background: linear-gradient(105deg, #f0143a, #d5002f) !important;
-  box-shadow: 0 14px 30px rgba(222, 0, 48, .24) !important;
-  color: #fff !important;
-  text-align: center;
-}
-
-.launch-savings-pill strong {
-  color: #fff !important;
-  font-size: 23px;
-  font-weight: 950;
-  letter-spacing: -.02em;
-}
-
-.launch-price-card[data-plan-active="mensal"] .launch-savings-pill {
-  display: none !important;
-}
-
 .launch-price-card.is-changing .launch-price-stage,
-.launch-price-card.is-changing .launch-savings-pill,
 .launch-price-card.is-changing .launch-plan-description {
   animation: launch-price-swap .35s ease;
 }
@@ -153,18 +139,16 @@
 }
 
 @media (max-width: 560px) {
+  .launch-price-card .best-badge { top: -16px; right: 12px; max-width: calc(100% - 24px); min-height: 34px; padding-inline: 13px; font-size: 9px; }
   .launch-plan-switch { width: 100%; }
   .launch-price-stage { gap: 12px; min-height: 138px; }
   .launch-price-kicker { font-size: 11px; }
   .launch-price-line sup { margin-right: 9px; font-size: 36px; }
   .launch-price-value { font-size: 72px; }
   .launch-price-period { margin-bottom: 8px; font-size: 13px; }
-  .launch-savings-pill { min-height: 58px !important; }
-  .launch-savings-pill strong { font-size: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .launch-price-card.is-changing .launch-price-stage,
-  .launch-price-card.is-changing .launch-savings-pill,
   .launch-price-card.is-changing .launch-plan-description { animation: none; }
 }
