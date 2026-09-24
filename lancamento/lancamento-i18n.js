@@ -1,7 +1,6 @@
 (() => {
   const copy = {
     en: {
-      "OFERTA DE LANÇAMENTO": "LAUNCH OFFER",
       "Conhecer os planos": "See the plans",
       "Leve o DocFlow para os seus próximos projetos.": "Bring DocFlow to your next projects.",
       "Os dois planos incluem todas as ferramentas do DocFlow ARQ, atualizações e atendimento durante a assinatura.": "Both plans include every DocFlow ARQ tool, updates, and support during your subscription.",
@@ -32,7 +31,6 @@
       "7 dias de garantia · Revit 2023 a 2027 · suporte em português": "7-day guarantee · Revit 2023 through 2027 · support in Portuguese"
     },
     es: {
-      "OFERTA DE LANÇAMENTO": "OFERTA DE LANZAMIENTO",
       "Conhecer os planos": "Ver los planes",
       "Leve o DocFlow para os seus próximos projetos.": "Lleve DocFlow a sus próximos proyectos.",
       "Os dois planos incluem todas as ferramentas do DocFlow ARQ, atualizações e atendimento durante a assinatura.": "Ambos planes incluyen todas las herramientas de DocFlow ARQ, actualizaciones y soporte durante la suscripción.",

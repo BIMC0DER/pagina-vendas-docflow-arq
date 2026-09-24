@@ -884,32 +884,13 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 @media(max-width:680px){.concept-hero .concept-lead.hero-benefits{max-width:360px;font-size:16px}.concept-hero .hero-benefits li{align-items:start;grid-template-columns:24px minmax(0,1fr);gap:10px}.concept-hero .benefit-icon{width:24px;height:24px;margin-top:2px}}
 
 /* Faixa de lançamento, contida no canto da hero. */
-.launch-offer-ribbon{position:absolute;z-index:5;top:82px;left:-84px;width:390px;min-height:42px;display:flex;align-items:center;justify-content:center;padding:12px 18px;transform:rotate(-35deg);background:linear-gradient(100deg,#079bb1,#6944df);color:#fff;font-size:11px;font-weight:800;letter-spacing:.09em;text-align:center;box-shadow:0 6px 20px #4157a52b;border-block:1px solid #ffffff40;text-decoration:none}
-.launch-offer-ribbon:hover{color:#fff;filter:brightness(1.08)}
-.launch-offer-ribbon:focus-visible{outline:3px solid #0b8ba5;outline-offset:4px}
-@media(max-width:680px){.launch-offer-ribbon{top:0;left:0;width:100%;min-height:31px;transform:none;padding:8px 12px;font-size:9px;letter-spacing:.1em}.hero.concept-hero{padding-top:90px}}
 
 /* Faixa de lançamento ampliada, atravessando a hero. */
 .concept-hero .hero-grid{z-index:3}
-.launch-offer-ribbon{z-index:2;top:70px;left:-330px;width:1320px;min-height:62px;justify-content:space-around;gap:42px;padding:15px 42px;transform:rotate(-34deg);background:linear-gradient(100deg,#079bb1 4%,#327ccf 52%,#6944df 96%);font-size:14px;font-weight:900;letter-spacing:.12em;white-space:nowrap;box-shadow:0 12px 38px #4157a540;border-block-color:#ffffff66}
-.launch-offer-ribbon span{display:block}
-@media(max-width:680px){.launch-offer-ribbon{z-index:5;top:0;left:0;width:100%;min-height:34px;transform:none;padding:9px 12px;font-size:9px;letter-spacing:.1em;justify-content:center}.launch-offer-ribbon span:not(:first-child){display:none}}
 
 /* Faixa de lançamento: versão grande e vermelha. */
-.launch-offer-ribbon{top:58px;left:-390px;width:1580px;min-height:88px;padding:22px 56px;gap:58px;background:linear-gradient(100deg,#b90019 0%,#ef152b 48%,#a90017 100%);font-size:18px;letter-spacing:.14em;text-shadow:0 2px 10px rgba(74,0,9,.35);box-shadow:0 18px 48px rgba(190,0,25,.34),0 0 0 1px rgba(255,255,255,.22) inset;border-block-color:rgba(255,255,255,.72)}
-.launch-offer-ribbon:hover{background:linear-gradient(100deg,#cc001c 0%,#ff263b 48%,#bd001a 100%);filter:none}
-@media(max-width:680px){.launch-offer-ribbon{top:0;left:0;width:100%;min-height:40px;padding:11px 12px;font-size:10px;letter-spacing:.12em;box-shadow:0 8px 24px rgba(190,0,25,.24)}}
 
 /* Letreiro contínuo da oferta. */
-.launch-offer-ribbon{overflow:hidden;justify-content:flex-start;padding-inline:0}
-.launch-offer-ribbon .offer-ribbon-track{display:flex;width:max-content;flex:none;animation:offerRibbonLoop 24s linear infinite;will-change:transform}
-.launch-offer-ribbon .offer-ribbon-group{display:flex;align-items:center;flex:none;gap:42px;padding-right:42px}
-.launch-offer-ribbon .offer-ribbon-group b{font:inherit;color:inherit;white-space:nowrap}
-.launch-offer-ribbon .offer-ribbon-group i{font-style:normal;font-size:.62em;color:#fff8;filter:drop-shadow(0 0 5px #fff8)}
-.launch-offer-ribbon:hover .offer-ribbon-track{animation-play-state:paused}
-@keyframes offerRibbonLoop{to{transform:translateX(-50%)}}
-@media(max-width:680px){.launch-offer-ribbon .offer-ribbon-track{display:flex;animation-duration:19s}.launch-offer-ribbon .offer-ribbon-group{display:flex;gap:26px;padding-right:26px}.launch-offer-ribbon .offer-ribbon-group b,.launch-offer-ribbon .offer-ribbon-group i{display:block!important}}
-@media(prefers-reduced-motion:reduce){.launch-offer-ribbon .offer-ribbon-track{animation:none}.launch-offer-ribbon .offer-ribbon-group:nth-child(2){display:none}}
 
 /* Segundo caminho da hero: descoberta das ferramentas. */
 .concept-hero .hero-actions{gap:12px}
@@ -918,7 +899,6 @@ dialog::backdrop{background:rgba(13,17,23,.5)}
 .button-play{display:grid;place-items:center;width:25px;height:25px;padding-left:2px;border-radius:50%;background:linear-gradient(135deg,#079bb1,#6944df);color:#fff;font-size:8px;box-shadow:0 5px 13px rgba(68,84,185,.24)}
 @media(max-width:680px){.concept-hero .hero-actions{width:100%;max-width:360px}.concept-hero .hero-actions .button{width:100%}}
 
-.launch-offer-ribbon{pointer-events:none;cursor:default}
 
 
 /* Ribbon interativa: ícones originais dos comandos DocFlow. */
