@@ -138,8 +138,7 @@
 }
 
 .launch-price-card[data-plan-active="mensal"] .launch-savings-pill {
-  background: linear-gradient(105deg, #5f44d8, #805ce7) !important;
-  box-shadow: 0 14px 30px rgba(95, 68, 216, .22) !important;
+  display: none !important;
 }
 
 .launch-price-card.is-changing .launch-price-stage,

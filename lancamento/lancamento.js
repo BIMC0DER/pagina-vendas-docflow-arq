@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       kicker: "pagamento mensal de",
       price: "99",
       period: "/ mês",
-      saving: "24% mais caro",
+      saving: "",
       description: "R$ 99 por mês, sem compromisso. Cancele quando quiser.",
       cta: "Quero o plano mensal — R$ 99/mês",
       plan: "mensal"
