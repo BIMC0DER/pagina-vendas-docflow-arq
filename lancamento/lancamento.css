@@ -121,15 +121,10 @@
   line-height: 1;
 }
 
-.launch-plan-description {
-  min-height: 42px !important;
-  margin: 0 0 18px !important;
-  color: #68768a !important;
-  font-size: 13px !important;
-}
+.launch-price-card .compact-plan-features { margin-top: 10px !important; }
 
 .launch-price-card.is-changing .launch-price-stage,
-.launch-price-card.is-changing .launch-plan-description {
+.launch-price-card.is-changing .compact-plan-features {
   animation: launch-price-swap .35s ease;
 }
 
@@ -150,5 +145,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .launch-price-card.is-changing .launch-price-stage,
-  .launch-price-card.is-changing .launch-plan-description { animation: none; }
+  .launch-price-card.is-changing .compact-plan-features { animation: none; }
 }

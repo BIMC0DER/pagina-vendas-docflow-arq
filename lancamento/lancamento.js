@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = {
     anual: {
       badge: "R$ 200 OFF - MAIS VANTAJOSO",
-      kicker: "por apenas 12x de",
+      kicker: "por apenas",
       price: "79",
-      period: "",
-      description: "Acesso completo durante 1 ano, com cobrança anual parcelada.",
+      period: "/ mês",
+      features: ["Acesso completo durante 1 ano", "Todas as ferramentas e atualizações do DocFlow ARQ", "Até 2 usuários ativos por licença", "7 dias de garantia"],
       cta: "Quero o plano anual — 12x de R$ 79",
       plan: "anual"
     },
     mensal: {
       badge: "MAIS FLEXÍVEL",
-      kicker: "pagamento mensal de",
+      kicker: "por apenas",
       price: "99",
       period: "/ mês",
-      description: "R$ 99 por mês, sem compromisso. Cancele quando quiser.",
+      features: ["Sem compromisso anual", "Todas as ferramentas e atualizações do DocFlow ARQ", "Até 2 usuários ativos por licença", "7 dias de garantia"],
       cta: "Quero o plano mensal — R$ 99/mês",
       plan: "mensal"
     }
@@ -29,9 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     kicker: card.querySelector("[data-launch-kicker]"),
     price: card.querySelector("[data-launch-price]"),
     period: card.querySelector("[data-launch-period]"),
-    description: card.querySelector("[data-launch-description]"),
     checkout: card.querySelector("[data-launch-checkout]")
   };
+
+  const featureList = card.querySelector("[data-launch-features]");
 
   const trackingNames = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "src", "sck", "ref", "gclid", "fbclid"];
   const withTracking = (rawUrl) => {
@@ -52,6 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!element || key === "checkout") return;
       element.textContent = next[key];
     });
+    featureList.replaceChildren(...next.features.map((text) => {
+      const item = document.createElement("li");
+      item.textContent = text;
+      return item;
+    }));
     fields.checkout.textContent = next.cta;
     fields.checkout.href = withTracking(fields.checkout.dataset[`${plan}Url`]);
     switcher.querySelectorAll("button").forEach((button) => {
