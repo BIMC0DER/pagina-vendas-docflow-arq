@@ -1,7 +1,7 @@
 (() => {
   const copy = {
     en: {
-      "Conhecer os planos": "See the plans",
+      "Acessar o plugin": "Access the plugin",
       "Leve o DocFlow para os seus próximos projetos.": "Bring DocFlow to your next projects.",
       "O plano anual inclui todas as ferramentas do DocFlow ARQ, atualizações e atendimento durante a assinatura.": "The annual plan includes every DocFlow ARQ tool, updates, and support during your subscription.",
       "Escolha o período da assinatura": "Choose the subscription period",
@@ -23,7 +23,7 @@
       "7 dias de garantia · Revit 2023 a 2027 · suporte em português": "7-day guarantee · Revit 2023 through 2027 · support in Portuguese"
     },
     es: {
-      "Conhecer os planos": "Ver los planes",
+      "Acessar o plugin": "Acceder al plugin",
       "Leve o DocFlow para os seus próximos projetos.": "Lleve DocFlow a sus próximos proyectos.",
       "O plano anual inclui todas as ferramentas do DocFlow ARQ, atualizações e atendimento durante a assinatura.": "El plan anual incluye todas las herramientas de DocFlow ARQ, actualizaciones y soporte durante la suscripción.",
       "Escolha o período da assinatura": "Elija el período de suscripción",
